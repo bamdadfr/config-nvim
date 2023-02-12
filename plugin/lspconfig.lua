@@ -135,7 +135,7 @@ nvim_lsp.pylsp.setup {
 }
 
 nvim_lsp.bashls.setup {
-    on_attach = on_attach,
+    on_attach = attach_and_format,
     capabilities = capabilities,
 }
 
