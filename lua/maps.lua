@@ -17,6 +17,8 @@ keymap.set('n', '<S-z>', '<S-w>')
 keymap.set('n', '<C-z>', '<C-w>')
 keymap.set('n', 'cz', 'cw')
 keymap.set('n', 'dz', 'dw')
+keymap.set('n', 'viz', 'viw')
+keymap.set('n', 'viZ', 'viW')
 
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
