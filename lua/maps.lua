@@ -5,6 +5,19 @@ local keymap = vim.keymap
 keymap.set('n', 'x', '"_x')
 keymap.set('x', '<leader>p', '"_dP')
 
+-- Invert `w` and `z` keys
+keymap.set('n', 'w', 'z')
+keymap.set('n', '<S-w>', '<S-z>')
+keymap.set('n', '<C-w>', '<C-z>')
+keymap.set('n', 'cw', 'cz')
+keymap.set('n', 'dw', 'dz')
+
+keymap.set('n', 'z', 'w')
+keymap.set('n', '<S-z>', '<S-w>')
+keymap.set('n', '<C-z>', '<C-w>')
+keymap.set('n', 'cz', 'cw')
+keymap.set('n', 'dz', 'dw')
+
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
 keymap.set('n', '-', '<C-x>')
