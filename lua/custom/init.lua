@@ -1,3 +1,7 @@
+-- Import modules
+
+require "custom.telescope"
+
 -- Options
 
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
@@ -54,24 +58,12 @@ vim.opt.laststatus = 2
 vim.opt.expandtab = true
 vim.opt.scrolloff = 10
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
-vim.opt.inccommand = true -- Case insensitive searching UNLESS /C or capital in search
-vim.opt.smartab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.wrap = false -- No Wrap lines
 vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.path:append { "**" } -- Finding files - Search down into subfolders
-
-require("telescope").setup {
-  defaults = {
-    file_ignore_patterns = {
-      "node_modules",
-      "__pycache__",
-      "venv",
-    },
-  },
-}
 
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {

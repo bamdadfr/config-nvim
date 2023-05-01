@@ -4,7 +4,6 @@ local attach_and_format = require "custom.utils.attach_and_format"
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
--- local config = require "lspconfig"
 local status, config = pcall(require, "lspconfig")
 
 if not status then
