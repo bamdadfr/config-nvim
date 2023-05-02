@@ -161,8 +161,8 @@ config.svelte.setup {
 config.volar.setup {
   capabilities = capabilities,
   on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
     client.server_capabilities.documentFormattingProvider = false
+    on_attach(client, bufnr)
   end,
   -- filetypes = is_npm_package_installed 'vue' and { 'vue', 'typescript', 'javascript' } or { 'vue' },
   filetypes = { "typescript", "vue" },
