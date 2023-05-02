@@ -70,8 +70,14 @@ local wakatime = {
   lazy = false,
 }
 
+local lazygit = {
+  "kdheepak/lazygit.nvim",
+  lazy = false,
+}
+
 return {
   mason,
   lsp,
   wakatime,
+  lazygit,
 }
