@@ -89,10 +89,31 @@ local trouble = {
   },
 }
 
+local aerial = {
+  "stevearc/aerial.nvim",
+  lazy = false,
+  opts = {
+    layout = {
+      min_width = 50,
+    },
+    highlight_on_hover = true,
+    autojump = true,
+    -- show_guides = true,
+    filter_kind = false,
+    guides = {
+      mid_item = "├ ",
+      last_item = "└ ",
+      nested_top = "│ ",
+      whitespace = "  ",
+    },
+  },
+}
+
 return {
   mason,
   lsp,
   wakatime,
   lazygit,
   trouble,
+  aerial,
 }
