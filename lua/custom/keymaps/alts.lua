@@ -6,5 +6,11 @@ vim.keymap.set("n", "<A-w>", function()
   require("nvchad_ui.tabufline").close_buffer()
 end)
 
--- ctrl+alt+9
-vim.keymap.set("n", "<A-9>", "<cmd> LazyGit <CR>")
+-- alt+9
+vim.keymap.set("n", "<A-ç>", "<cmd> LazyGit <CR>")
+
+-- alt+1
+vim.keymap.set("n", "<A-&>", "<cmd> NvimTreeToggle <CR>")
+
+-- alt+$
+vim.keymap.set("n", "<A-$>", "<cmd> vsp <CR>")
