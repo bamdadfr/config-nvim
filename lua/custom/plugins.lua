@@ -1,4 +1,4 @@
-local ensured_installed = {
+local mason_dependencies = {
   -- Language servers
   "bash-language-server",
   "pyright",
@@ -40,33 +40,38 @@ local ensured_installed = {
   "chrome-debug-adapter",
 }
 
-local plugins = {
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = ensured_installed,
-    },
-  },
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
-    end,
-    dependencies = {
-      {
-        "jose-elias-alvarez/null-ls.nvim",
-        config = function()
-          require "custom.configs.null-ls"
-        end,
-      },
-      "jose-elias-alvarez/typescript.nvim",
-      "folke/neodev.nvim",
-    },
-  },
-  {
-    "wakatime/vim-wakatime",
+local mason = {
+  "williamboman/mason.nvim",
+  opts = {
+    ensure_installed = mason_dependencies,
   },
 }
 
-return plugins
+local lsp = {
+  "neovim/nvim-lspconfig",
+  config = function()
+    require "plugins.configs.lspconfig"
+    require "custom.services.lsp-service"
+  end,
+  dependencies = {
+    {
+      "jose-elias-alvarez/null-ls.nvim",
+      config = function()
+        require "custom.services.null-ls-service"
+      end,
+    },
+    "jose-elias-alvarez/typescript.nvim",
+    "folke/neodev.nvim",
+  },
+}
+
+local wakatime = {
+  "wakatime/vim-wakatime",
+  lazy = false,
+}
+
+return {
+  mason,
+  lsp,
+  wakatime,
+}

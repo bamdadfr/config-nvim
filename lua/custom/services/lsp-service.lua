@@ -121,6 +121,7 @@ require("neodev").setup {}
 
 config.lua_ls.setup {
   capabilities = capabilities,
+  on_attach = on_attach,
   settings = {
     Lua = {
       format = {
