@@ -14,12 +14,6 @@ vim.keymap.set("n", "dz", "dw")
 vim.keymap.set("n", "viz", "viw")
 vim.keymap.set("n", "viZ", "viW")
 
--- a
-vim.keymap.set("n", "a", "q")
-
--- q
-vim.keymap.set("n", "q", "a")
-
 -- numbers
 vim.keymap.set("n", "&", "1")
 vim.keymap.set("n", "é", "2")
@@ -31,3 +25,4 @@ vim.keymap.set("n", "è", "7")
 vim.keymap.set("n", "_", "8")
 vim.keymap.set("n", "ç", "9")
 vim.keymap.set("n", "à", "0")
+vim.keymap.set("n", ")", "_")
