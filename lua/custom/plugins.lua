@@ -109,6 +109,33 @@ local aerial = {
   },
 }
 
+local goto_preview = {
+  "rmagatti/goto-preview",
+  config = function()
+    require("goto-preview").setup {}
+  end,
+  lazy = false,
+}
+
+local telescope = {
+  "nvim-telescope/telescope.nvim",
+  config = function()
+    -- vim.opt.inccommand = true -- Case insensitive searching UNLESS /C or capital in search
+    vim.opt.smarttab = true
+
+    local defaults = {
+      file_ignore_patterns = {
+        "node_modules",
+        "__pycache__",
+        "venv",
+      },
+    }
+    require("telescope").setup {
+      defaults = defaults,
+    }
+  end,
+}
+
 return {
   mason,
   lsp,
@@ -116,4 +143,6 @@ return {
   lazygit,
   trouble,
   aerial,
+  goto_preview,
+  telescope,
 }
