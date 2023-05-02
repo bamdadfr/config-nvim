@@ -3,6 +3,11 @@ vim.keymap.set("n", "<A-w>", function()
   require("nvchad_ui.tabufline").close_buffer()
 end)
 
+-- leader+:
+vim.keymap.set("n", "<leader>:", function()
+  require("Comment.api").toggle.linewise.current()
+end)
+
 -- These mappings will be bound to alt and leader keys
 local mappings = {
   {
