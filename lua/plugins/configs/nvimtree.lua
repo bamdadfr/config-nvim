@@ -14,13 +14,12 @@ local options = {
   },
   view = {
     adaptive_size = false,
-    side = "left",
-    width = 30,
+    side = "right",
+    width = 50,
     preserve_window_proportions = true,
   },
   git = {
-    enable = false,
-    ignore = true,
+    enable = true,
   },
   filesystem_watchers = {
     enable = true,
@@ -30,10 +29,14 @@ local options = {
       resize_window = true,
     },
   },
+  diagnostics = {
+    enable = true,
+  },
   renderer = {
     root_folder_label = false,
-    highlight_git = false,
-    highlight_opened_files = "none",
+    highlight_git = true,
+    highlight_opened_files = "icon",
+    highlight_modified = "name",
 
     indent_markers = {
       enable = false,
