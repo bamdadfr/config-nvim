@@ -75,9 +75,24 @@ local lazygit = {
   lazy = false,
 }
 
+local trouble = {
+  "folke/trouble.nvim",
+  dependencies = {
+    {
+      "folke/todo-comments.nvim",
+      config = function()
+        require("todo-comments").setup {
+          signs = true,
+        }
+      end,
+    },
+  },
+}
+
 return {
   mason,
   lsp,
   wakatime,
   lazygit,
+  trouble,
 }

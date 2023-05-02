@@ -14,3 +14,6 @@ vim.keymap.set("n", "<A-&>", "<cmd> NvimTreeToggle <CR>")
 
 -- alt+$
 vim.keymap.set("n", "<A-$>", "<cmd> vsp <CR>")
+
+-- alt+8
+vim.keymap.set("n", "<A-_>", "<cmd> TodoTrouble <CR>")
