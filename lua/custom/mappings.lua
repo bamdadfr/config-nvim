@@ -38,20 +38,20 @@ M.abc = {
     ["<leader>$"] = { "<cmd> vsp <CR>", "Split vertically" },
 
     -- Key `w`
-    ["w"] = { "z", "" },
-    ["<S-w>"] = { "<S-z>", "" },
-    ["<C-w>"] = { "<C-z>", "" },
-    ["cw"] = { "cz", "" },
-    ["dw"] = { "dz", "" },
+    ["w"] = { "z", "", opts = { nowait = true } },
+    ["<S-w>"] = { "<S-z>", "", opts = { nowait = true } },
+    ["<C-w>"] = { "<C-z>", "", opts = { nowait = true } },
+    ["cw"] = { "cz", "", opts = { nowait = true } },
+    ["dw"] = { "dz", "", opts = { nowait = true } },
 
     -- Key `z`
-    ["z"] = { "w", "" },
-    ["<S-z>"] = { "<S-w>", "" },
-    ["<C-z>"] = { "<C-w>", "" },
-    ["cz"] = { "cw", "" },
-    ["dz"] = { "dw", "" },
-    ["viz"] = { "viw", "" },
-    ["viZ"] = { "viW", "" },
+    ["z"] = { "w", "", opts = { nowait = true } },
+    ["<C-z>"] = { "<C-w>", "", opts = { nowait = true } },
+    ["<S-z>"] = { "<S-w>", "", opts = { nowait = true } },
+    ["cz"] = { "cw", "", opts = { nowait = true } },
+    ["dz"] = { "dw", "", opts = { nowait = true } },
+    ["viz"] = { "viw", "", opts = { nowait = true } },
+    ["viZ"] = { "viW", "", opts = { nowait = true } },
 
     -- Number row
     ["&"] = { "1", "" },
