@@ -25,6 +25,7 @@ local mason_dependencies = {
   "markdownlint",
   "alex",
   "textlint",
+  "hadolint",
 
   -- Formatters
   "isort",

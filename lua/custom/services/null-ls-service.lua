@@ -29,7 +29,9 @@ local sources = {
   code_actions.ltrs,
   diagnostics.alex,
   diagnostics.markdownlint,
-  diagnostics.ltrs,
+  diagnostics.ltrs.with {
+    filetypes = { "markdown" },
+  },
   diagnostics.textlint,
   formatting.markdownlint,
   formatting.textlint,
@@ -53,6 +55,9 @@ local sources = {
   code_actions.eslint,
   diagnostics.eslint_d,
   formatting.prettierd,
+
+  -- Docker
+  diagnostics.hadolint,
 }
 
 null_ls.setup {
