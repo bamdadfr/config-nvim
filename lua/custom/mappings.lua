@@ -141,7 +141,14 @@ M.abc = {
   },
 
   i = {
+    -- Exit
     ["<C-c>"] = { "<Esc>", "", opts = { nowait = true } },
+
+    -- Key `z`
+    ["<C-z>"] = { "<C-w>", "", opts = { nowait = true } },
+
+    -- Key `w`
+    ["<C-w>"] = { "<C-z>", "", opts = { nowait = true } },
   },
 }
 
