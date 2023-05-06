@@ -36,6 +36,9 @@ M.abc = {
       opts,
     },
 
+    -- Map A-n to C-n
+    ["<A-n>"] = { "<C-n>", "", opts },
+
     -- Comment
     ["<leader>:"] = {
       function()

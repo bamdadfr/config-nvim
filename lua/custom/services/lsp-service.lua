@@ -1,6 +1,6 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
-local attach_and_format = require "custom.utils.attach_and_format"
+-- local attach_and_format = require "custom.utils.attach_and_format"
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
@@ -40,23 +40,23 @@ config.tsserver.setup {
   filetypes = { "typescript" },
 }
 
-config.eslint.setup {
-  capabilities = capabilities,
-  -- on_attach = on_attach,
-  -- on_attach = function(client, bufnr)
-  --   client.server_capabilities.documentFormattingProvider = true
-  --   -- vim.api.nvim_create_autocmd("BufWritePre", {
-  --   -- buffer = bufnr,
-  --   -- command = "EslintFixAll"
-  --   -- })
-  -- end,
-  root_dir = root_pattern(
-    ".eslintrc.js",
-    ".eslintrc.cjs",
-    ".eslintrc.json",
-    ".eslintrc"
-  ),
-}
+-- config.eslint.setup {
+--   capabilities = capabilities,
+--   -- on_attach = on_attach,
+--   -- on_attach = function(client, bufnr)
+--   --   client.server_capabilities.documentFormattingProvider = true
+--   --   -- vim.api.nvim_create_autocmd("BufWritePre", {
+--   --   -- buffer = bufnr,
+--   --   -- command = "EslintFixAll"
+--   --   -- })
+--   -- end,
+--   root_dir = root_pattern(
+--     ".eslintrc.js",
+--     ".eslintrc.cjs",
+--     ".eslintrc.json",
+--     ".eslintrc"
+--   ),
+-- }
 
 -- config.eslint.setup({
 --   on_attach = function(client, bufnr)
@@ -165,7 +165,11 @@ config.volar.setup {
     on_attach(client, bufnr)
   end,
   -- filetypes = is_npm_package_installed 'vue' and { 'vue', 'typescript', 'javascript' } or { 'vue' },
-  filetypes = { "typescript", "vue" },
+  filetypes = {
+    "vue",
+    -- "typescript",
+    -- "javascript",
+  },
 }
 
 -- https://github.com/redhat-developer/yaml-language-server
