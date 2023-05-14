@@ -1,3 +1,3 @@
 ```bash
-git clone git@github.com:bamdadsabbagh/config-nvim.git ~/.config/nvim
+git clone --depth 1 git@github.com:bamdadsabbagh/config-nvim.git ~/.config/nvim
 ```
