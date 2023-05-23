@@ -31,14 +31,14 @@ config.dockerls.setup {
   capabilities = capabilities,
 }
 
-config.tsserver.setup {
-  capabilities = capabilities,
-  on_attach = function(client, bufnr)
-    client.server_capabilities.documentFormattingProvider = false
-    on_attach(client, bufnr)
-  end,
-  filetypes = { "typescript" },
-}
+-- config.tsserver.setup {
+--   capabilities = capabilities,
+--   on_attach = function(client, bufnr)
+--     client.server_capabilities.documentFormattingProvider = false
+--     on_attach(client, bufnr)
+--   end,
+--   filetypes = { "typescript" },
+-- }
 
 -- config.eslint.setup {
 --   capabilities = capabilities,
@@ -167,8 +167,8 @@ config.volar.setup {
   -- filetypes = is_npm_package_installed 'vue' and { 'vue', 'typescript', 'javascript' } or { 'vue' },
   filetypes = {
     "vue",
-    -- "typescript",
-    -- "javascript",
+    "typescript",
+    "javascript",
   },
 }
 
