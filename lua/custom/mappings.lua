@@ -48,6 +48,10 @@ M.abc = {
       opts,
     },
 
+    -- Alt Down and Up
+    ["<A-d>"] = { "<C-d>", "", opts },
+    ["<A-u>"] = { "<C-u>", "", opts },
+
     -- Write buffer
     ["<A-s>"] = { "<cmd> w <CR>", "Write buffer", opts },
     ["<leader>s"] = { "<cmd> w <CR>", "Write buffer", opts },
