@@ -39,6 +39,9 @@ M.abc = {
     -- Map A-n to C-n
     ["<A-n>"] = { "<C-n>", "", opts },
 
+    -- Map A-z to C-z
+    ["<A-z>"] = { "<C-z>", "", opts },
+
     -- Comment
     ["<leader>:"] = {
       function()
