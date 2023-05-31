@@ -137,6 +137,37 @@ local telescope = {
   end,
 }
 
+local nvimtree = {
+  "nvim-tree/nvim-tree.lua",
+  opts = {
+    view = {
+      side = "right",
+      width = 50,
+    },
+    git = {
+      enable = true,
+    },
+    diagnostics = {
+      enable = true,
+    },
+    renderer = {
+      highlight_git = true,
+      highlight_opened_files = "icon",
+      highlight_modified = "name",
+      icons = {
+        glyphs = {
+          folder = {
+            default = "",
+          },
+        },
+      },
+    },
+  },
+  config = function(_, opts)
+    require("nvim-tree").setup(opts)
+  end,
+}
+
 return {
   mason,
   lsp,
@@ -146,4 +177,5 @@ return {
   aerial,
   goto_preview,
   telescope,
+  nvimtree,
 }
