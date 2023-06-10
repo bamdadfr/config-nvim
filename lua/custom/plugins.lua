@@ -168,6 +168,13 @@ local nvimtree = {
   end,
 }
 
+local markdownPreview = {
+  "iamcco/markdown-preview.nvim",
+  lazy = false,
+  ft = "markdown",
+  build = ":call mkdp#util#install()",
+}
+
 return {
   mason,
   lsp,
@@ -178,4 +185,5 @@ return {
   goto_preview,
   telescope,
   nvimtree,
+  markdownPreview,
 }

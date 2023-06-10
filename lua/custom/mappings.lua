@@ -160,6 +160,13 @@ M.abc = {
     ["<leader>y"] = { [["+y]], "", opts },
     ["<leader>Y"] = { [["+Y]], "", opts },
     ["<leader>d"] = { [["_d]], "", opts },
+
+    -- Markdown preview
+    ["<leader>pm"] = {
+      "<cmd> MarkdownPreviewToggle <CR>",
+      "Preview Markdown (Toggle)",
+      opts,
+    },
   },
 
   v = {
