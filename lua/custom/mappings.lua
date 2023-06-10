@@ -170,6 +170,19 @@ M.abc = {
       opts,
     },
 
+    -- Number row
+    ["&"] = { "1", "", opts },
+    ["é"] = { "2", "", opts },
+    ['"'] = { "3", "", opts },
+    ["'"] = { "4", "", opts },
+    ["("] = { "5", "", opts },
+    ["-"] = { "6", "", opts },
+    ["è"] = { "7", "", opts },
+    ["_"] = { "8", "", opts },
+    ["ç"] = { "9", "", opts },
+    ["à"] = { "0", "", opts },
+    [")"] = { "_", "", opts },
+
     -- https://github.com/ThePrimeagen/init.lua/blob/master/lua/theprimeagen/remap.lua
     ["J"] = {
       ":m '>+1<CR>gv=gv",
