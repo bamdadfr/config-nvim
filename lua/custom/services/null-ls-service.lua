@@ -27,14 +27,14 @@ local sources = {
   hover.dictionary,
   code_actions.proselint,
   code_actions.ltrs,
-  diagnostics.alex,
-  diagnostics.markdownlint,
-  diagnostics.ltrs.with {
-    filetypes = { "markdown" },
-  },
-  diagnostics.textlint,
-  formatting.markdownlint,
+  -- diagnostics.alex,
+  -- diagnostics.ltrs.with {
+  --   filetypes = { "markdown" },
+  -- },
+  -- diagnostics.textlint,
   formatting.textlint,
+  diagnostics.markdownlint,
+  formatting.markdownlint,
 
   -- Python
   diagnostics.flake8.with {
@@ -54,7 +54,24 @@ local sources = {
   -- Web
   code_actions.eslint,
   diagnostics.eslint_d,
-  formatting.prettierd,
+  formatting.prettierd.with {
+    filetypes = {
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "vue",
+      "css",
+      "scss",
+      "less",
+      "html",
+      "json",
+      "jsonc",
+      "yaml",
+      "graphql",
+      "handlebars",
+    },
+  },
 
   -- Docker
   diagnostics.hadolint,
