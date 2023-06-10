@@ -1,6 +1,6 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
--- local attach_and_format = require "custom.utils.attach_and_format"
+local attach_and_format = require "custom.utils.attach_and_format"
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
@@ -13,7 +13,9 @@ end
 local root_pattern = config.util.root_pattern
 
 config.marksman.setup {
+  on_attach = attach_and_format,
   capabilities = capabilities,
+  filetypes = { "markdown" },
 }
 
 config.bashls.setup {
