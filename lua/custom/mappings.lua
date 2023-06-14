@@ -167,6 +167,10 @@ M.abc = {
       "Preview Markdown (Toggle)",
       opts,
     },
+
+    -- Navigate to previous location
+    ["<A-o>"] = { "<C-o>zz", "Navigate to previous location", opts },
+    ["<A-i>"] = { "<C-i>zz", "Navigate to next location", opts },
   },
 
   v = {
