@@ -200,18 +200,29 @@ M.abc = {
       "Move visual block down",
       opts,
     },
+
     ["K"] = {
       ":m '<-2<CR>gv=gv",
       "Move visual block up",
       opts,
     },
+
+    -- ThePrimeagen
     ["<leader>y"] = { [["+y]], "", opts },
+
+    -- ThePrimeagen
     ["<leader>d"] = { [["_d]], "", opts },
+
+    -- ThePrimeagen
     ["<leader>p"] = {
       '"_dP',
       "Paste over while retaining paste buffer",
       opts,
     },
+
+    -- Invert < and > for indenting
+    ["<"] = { ">", "", opts },
+    [">"] = { "<", "", opts },
   },
 
   i = {
