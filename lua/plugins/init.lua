@@ -201,10 +201,10 @@ local default_plugins = {
   {
     "numToStr/Comment.nvim",
     keys = {
-      { "gcc", mode = "n" },
-      { "gc", mode = "v" },
-      { "gbc", mode = "n" },
-      { "gb", mode = "v" },
+      { "gcc", mode = "n", desc = "Toggles comment on current line" },
+      { "gc", mode = { "n", "o", "x" }, desc = "Toggles comment on current line's region" },
+      { "gbc", mode = "n", desc = "Toggles blockwise comment on current line" },
+      { "gb", mode = { "n", "o", "x" }, desc = "Toggles blockwise comment on region" },
     },
     init = function()
       require("core.utils").load_mappings "comment"
@@ -256,7 +256,7 @@ local default_plugins = {
   -- Only load whichkey after all the gui
   {
     "folke/which-key.nvim",
-    keys = { "<leader>", '"', "'", "`", "c", "v" },
+    keys = { "<leader>", '"', "'", "`", "c", "v", "g" },
     init = function()
       require("core.utils").load_mappings "whichkey"
     end,
