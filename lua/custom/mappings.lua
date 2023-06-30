@@ -100,7 +100,7 @@ M.abc = {
     ["à"] = { "0", "", opts },
     [")"] = { "_", "", opts },
 
-    -- Jump while keeping cursor at middle row
+    -- Jump while keeping cursor centered
     ["<C-d>"] = {
       "<C-d>zz",
       "Jump down while keeping cursor at middle row",
@@ -112,7 +112,7 @@ M.abc = {
       opts,
     },
 
-    -- Iterate through search results while keeping cursor at middle row
+    -- Iterate search results while keeping cursor centered
     ["n"] = {
       "nzzzv",
       "Next search result while keeping cursor at middle row",
@@ -168,7 +168,7 @@ M.abc = {
       opts,
     },
 
-    -- Navigate to previous location
+    -- Navigate to next/previous locations
     ["<A-o>"] = { "<C-o>zz", "Navigate to previous location", opts },
     ["<A-i>"] = { "<C-i>zz", "Navigate to next location", opts },
   },
