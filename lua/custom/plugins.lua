@@ -131,9 +131,22 @@ local telescope = {
         "venv",
       },
     }
-    require("telescope").setup {
+
+    local telescope = require "telescope"
+
+    telescope.setup {
       defaults = defaults,
+      extensions = {
+        persisted = {
+          layout_config = {
+            width = 0.55,
+            height = 0.55,
+          },
+        },
+      },
     }
+
+    telescope.load_extension "persisted"
   end,
 }
 
@@ -209,6 +222,12 @@ local obsidian = {
   end,
 }
 
+local session = {
+  "olimorris/persisted.nvim",
+  lazy = false,
+  config = true,
+}
+
 return {
   mason,
   lsp,
@@ -221,4 +240,5 @@ return {
   nvimtree,
   markdownPreview,
   obsidian,
+  session,
 }

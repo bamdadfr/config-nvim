@@ -182,6 +182,13 @@ M.abc = {
     -- Navigate to next/previous locations
     ["<A-o>"] = { "<C-o>zz", "Navigate to previous location", opts },
     ["<A-i>"] = { "<C-i>zz", "Navigate to next location", opts },
+
+    -- Find persisted sessions
+    ["<leader>fs"] = {
+      "<cmd> Telescope persisted <CR>",
+      "Find persisted sessions",
+      opts,
+    },
   },
 
   v = {
