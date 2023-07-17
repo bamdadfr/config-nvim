@@ -1,9 +1,6 @@
 local M = {}
 
-M.ui = {
-  theme = "one_light",
-  transparency = true,
-}
+M.ui = {}
 
 M.plugins = "custom.plugins"
 

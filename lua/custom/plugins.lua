@@ -228,6 +228,15 @@ local session = {
   config = true,
 }
 
+local catppuccin = {
+  "catppuccin/nvim",
+  name = "catppuccin",
+  lazy = false,
+  config = function()
+    vim.cmd.colorscheme "catppuccin-mocha"
+  end,
+}
+
 return {
   mason,
   lsp,
@@ -241,4 +250,5 @@ return {
   markdownPreview,
   obsidian,
   session,
+  catppuccin,
 }
