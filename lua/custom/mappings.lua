@@ -189,6 +189,12 @@ M.abc = {
       "Find persisted sessions",
       opts,
     },
+
+    ["<leader>gk"] = {
+      "<cmd> DogeGenerate <CR>",
+      "Generate documentation",
+      opts,
+    },
   },
 
   v = {

@@ -237,6 +237,16 @@ local catppuccin = {
   end,
 }
 
+-- Documentation generator
+local doge = {
+  "kkoomen/vim-doge",
+  lazy = false,
+  config = function()
+    vim.cmd [[call doge#install()]]
+    vim.cmd [[let g:doge_doc_standard_python = "google"]]
+  end,
+}
+
 return {
   mason,
   lsp,
@@ -251,4 +261,5 @@ return {
   obsidian,
   session,
   catppuccin,
+  doge,
 }
