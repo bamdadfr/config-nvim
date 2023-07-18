@@ -261,6 +261,12 @@ M.abc = {
 
     -- Map A-z to C-w
     ["<A-z>"] = { "<C-w>", "", opts },
+
+    -- Basic movements with alt in insert mode
+    ["<A-h>"] = { "<Left>", "Move left", opts },
+    ["<A-l>"] = { "<Right>", "Move right", opts },
+    ["<A-j>"] = { "<Down>", "Move down", opts },
+    ["<A-k>"] = { "<Up>", "Move up", opts },
   },
 }
 
