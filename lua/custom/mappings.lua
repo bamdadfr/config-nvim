@@ -195,6 +195,12 @@ M.abc = {
       "Generate documentation",
       opts,
     },
+
+    -- Switch between windows with alt
+    ["<A-h>"] = { "<C-w>h", "Window left" },
+    ["<A-l>"] = { "<C-w>l", "Window right" },
+    ["<A-j>"] = { "<C-w>j", "Window down" },
+    ["<A-k>"] = { "<C-w>k", "Window up" },
   },
 
   v = {
