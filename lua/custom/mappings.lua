@@ -67,6 +67,9 @@ M.abc = {
     ["<A-s>"] = { "<cmd> w <CR>", "Write buffer", opts },
     ["<leader>s"] = { "<cmd> w <CR>", "Write buffer", opts },
 
+    -- Toggle tree
+    ["<A-e>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree", opts },
+
     -- Split vertically
     ["<A-$>"] = {
       "<cmd> vsp <CR>",
