@@ -263,7 +263,8 @@ M.abc = {
 
   i = {
     -- Exit
-    ["<C-c>"] = { "<Esc>", "", opts },
+    ["<C-c>"] = { "<Esc>", "Exit", opts },
+    ["<A-c>"] = { "<Esc>", "Exit", opts },
 
     -- Key `z`
     ["<C-z>"] = { "<C-w>", "", opts },
