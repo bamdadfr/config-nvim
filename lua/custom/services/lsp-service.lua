@@ -33,14 +33,17 @@ config.dockerls.setup {
   capabilities = capabilities,
 }
 
--- config.tsserver.setup {
---   capabilities = capabilities,
---   on_attach = function(client, bufnr)
---     client.server_capabilities.documentFormattingProvider = false
---     on_attach(client, bufnr)
---   end,
---   filetypes = { "typescript" },
--- }
+config.tsserver.setup {
+  capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    client.server_capabilities.documentFormattingProvider = false
+    on_attach(client, bufnr)
+  end,
+  filetypes = {
+    "javascript",
+    -- "typescript",
+  },
+}
 
 -- config.eslint.setup {
 --   capabilities = capabilities,
@@ -60,15 +63,19 @@ config.dockerls.setup {
 --   ),
 -- }
 
--- config.eslint.setup({
---   on_attach = function(client, bufnr)
+-- config.eslint.setup {
+--   on_attach = function(_, bufnr)
 --     vim.api.nvim_create_autocmd("BufWritePre", {
 --       buffer = bufnr,
---       command = "EslintFixAll"
+--       command = "EslintFixAll",
 --     })
 --   end,
 --   capabilities = capabilities,
--- })
+--   filetypes = {
+--     "javascript",
+--     -- "typescript",
+--   },
+-- }
 
 -- https://github.com/graphql/graphiql/tree/main/packages/graphql-language-service-cli
 config.graphql.setup {
@@ -170,7 +177,7 @@ config.volar.setup {
   filetypes = {
     "vue",
     "typescript",
-    "javascript",
+    -- "javascript",
   },
 }
 
