@@ -200,7 +200,7 @@ local markdownPreview = {
 
 local obsidian = {
   "epwalsh/obsidian.nvim",
-  lazy = true,
+  lazy = false,
   event = {
     "BufReadPre " .. vim.fn.expand "~" .. "/OneDrive/00-sync/obsidian/**.md",
   },
