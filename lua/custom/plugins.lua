@@ -132,9 +132,7 @@ local telescope = {
       },
     }
 
-    local telescope = require "telescope"
-
-    telescope.setup {
+    require("telescope").setup {
       defaults = defaults,
       opts = opts,
       extensions = {
@@ -152,7 +150,7 @@ local telescope = {
     --   telescope.load_extension(ext)
     -- end
 
-    telescope.load_extension "persisted"
+    require("telescope").load_extension "persisted"
   end,
 }
 
