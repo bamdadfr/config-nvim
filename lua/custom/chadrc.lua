@@ -1,6 +1,7 @@
 local M = {}
 
 M.ui = {
+  transparency = true,
   statusline = {
     theme = "minimal",
   },
