@@ -120,6 +120,9 @@ local goto_preview = {
 
 local telescope = {
   "nvim-telescope/telescope.nvim",
+  dependencies = {
+    "olimorris/persisted.nvim",
+  },
   config = function(_, opts)
     -- vim.opt.inccommand = true -- Case insensitive searching UNLESS /C or capital in search
     vim.opt.smarttab = true
@@ -132,7 +135,9 @@ local telescope = {
       },
     }
 
-    require("telescope").setup {
+    local t = require "telescope"
+
+    t.setup {
       defaults = defaults,
       opts = opts,
       extensions = {
@@ -145,12 +150,13 @@ local telescope = {
       },
     }
 
-    -- This is for default extensions from NvChad like NvThemes (but it messes up my colorscheme)
-    -- for _, ext in ipairs(opts.extensions_list) do
-    --   telescope.load_extension(ext)
-    -- end
+    -- Load default NvChad extensions for Telescope
+    for _, ext in ipairs(opts.extensions_list) do
+      t.load_extension(ext)
+    end
 
-    require("telescope").load_extension "persisted"
+    -- Load custom extension
+    t.load_extension "persisted"
   end,
 }
 
@@ -232,15 +238,6 @@ local session = {
   config = true,
 }
 
-local catppuccin = {
-  "catppuccin/nvim",
-  name = "catppuccin",
-  lazy = false,
-  config = function()
-    vim.cmd.colorscheme "catppuccin-mocha"
-  end,
-}
-
 -- Documentation generator
 local doge = {
   "kkoomen/vim-doge",
@@ -264,6 +261,5 @@ return {
   markdownPreview,
   obsidian,
   session,
-  catppuccin,
   doge,
 }
