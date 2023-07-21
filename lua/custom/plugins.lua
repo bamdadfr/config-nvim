@@ -120,7 +120,7 @@ local goto_preview = {
 
 local telescope = {
   "nvim-telescope/telescope.nvim",
-  config = function()
+  config = function(_, opts)
     -- vim.opt.inccommand = true -- Case insensitive searching UNLESS /C or capital in search
     vim.opt.smarttab = true
 
@@ -136,6 +136,7 @@ local telescope = {
 
     telescope.setup {
       defaults = defaults,
+      opts = opts,
       extensions = {
         persisted = {
           layout_config = {
@@ -145,6 +146,11 @@ local telescope = {
         },
       },
     }
+
+    -- This is for default extensions from NvChad like NvThemes (but it messes up my colorscheme)
+    -- for _, ext in ipairs(opts.extensions_list) do
+    --   telescope.load_extension(ext)
+    -- end
 
     telescope.load_extension "persisted"
   end,
