@@ -207,6 +207,13 @@ M.abc = {
 
     -- Select all
     ["<C-a>"] = { "ggVG", "Window up" },
+
+    -- Close all buffers except the current one
+    ["<A-S-x>"] = {
+      "<cmd> %bd|e# <CR>",
+      "Close all buffers except current",
+      opts,
+    },
   },
 
   v = {
