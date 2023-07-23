@@ -222,6 +222,13 @@ M.abc = {
       "Obsidian show references",
       opts,
     },
+
+    -- Obsidian find files
+    ["<leader>fO"] = {
+      "<cmd> ObsidianQuickSwitch <CR>",
+      "Obsidian find Obsidian files",
+      opts,
+    },
   },
 
   v = {
