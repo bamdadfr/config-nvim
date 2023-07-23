@@ -25,12 +25,6 @@ M.disabled = {
 -- Your custom mappings
 M.abc = {
   n = {
-    ["<leader>o"] = {
-      "<cmd> echo 'test' <CR>",
-      "Test",
-      opts,
-    },
-
     -- Close buffer
     ["<A-w>"] = {
       function()
@@ -200,18 +194,32 @@ M.abc = {
     },
 
     -- Switch between windows with alt
-    ["<A-h>"] = { "<C-w>h", "Window left" },
-    ["<A-l>"] = { "<C-w>l", "Window right" },
-    ["<A-j>"] = { "<C-w>j", "Window down" },
-    ["<A-k>"] = { "<C-w>k", "Window up" },
+    ["<A-h>"] = { "<C-w>h", "Window left", opts },
+    ["<A-l>"] = { "<C-w>l", "Window right", opts },
+    ["<A-j>"] = { "<C-w>j", "Window down", opts },
+    ["<A-k>"] = { "<C-w>k", "Window up", opts },
 
     -- Select all
-    ["<C-a>"] = { "ggVG", "Window up" },
+    ["<C-a>"] = { "ggVG", "Window up", opts },
 
     -- Close all buffers except the current one
     ["<A-S-x>"] = {
       "<cmd> %bd|e# <CR>",
       "Close all buffers except current",
+      opts,
+    },
+
+    -- Obsidian go to definition
+    ["<leader>od"] = {
+      "<cmd> ObsidianFollowLink <CR>",
+      "Obsidian go to definition",
+      opts,
+    },
+
+    -- Obsidian show references
+    ["<leader>or"] = {
+      "<cmd> ObsidianBacklinks <CR>",
+      "Obsidian show references",
       opts,
     },
   },
