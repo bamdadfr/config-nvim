@@ -13,8 +13,11 @@ end
 local root_pattern = config.util.root_pattern
 
 config.marksman.setup {
-  on_attach = attach_and_format,
   capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    vim.opt.shiftwidth = 2
+    on_attach(client, bufnr)
+  end,
   filetypes = { "markdown" },
 }
 
