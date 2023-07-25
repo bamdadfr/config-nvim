@@ -27,12 +27,7 @@ local sources = {
   hover.dictionary,
   code_actions.proselint,
   code_actions.ltrs,
-  -- diagnostics.alex,
-  -- diagnostics.ltrs.with {
-  --   filetypes = { "markdown" },
-  -- },
-  -- diagnostics.textlint,
-  formatting.textlint,
+  diagnostics.alex,
   diagnostics.markdownlint,
   formatting.markdownlint,
 
@@ -70,7 +65,6 @@ local sources = {
       "yaml",
       "graphql",
       "handlebars",
-      "markdown",
     },
   },
 
