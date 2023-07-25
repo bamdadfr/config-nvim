@@ -1,14 +1,16 @@
 #!/bin/bash
 
-git clone git@github.com:nvchad/nvchad.git ~/git/nvchad --depth 1
+target_folder="/tmp/nvchad"
+
+git clone git@github.com:nvchad/nvchad.git "$target_folder" --depth 1
 
 rm init.lua
-cp ~/git/nvchad/init.lua .
+cp "$target_folder"/init.lua .
 
 rm -rf lua/core
-cp -r ~/git/nvchad/lua/core lua
+cp -r "$target_folder"/lua/core lua
 
 rm -rf lua/plugins
-cp -r ~/git/nvchad/lua/plugins lua
+cp -r "$target_folder"/lua/plugins lua
 
-rm -rf ~/git/nvchad/
+rm -rf "$target_folder"
