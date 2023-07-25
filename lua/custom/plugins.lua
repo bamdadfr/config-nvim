@@ -216,6 +216,10 @@ local obsidian = {
       min_chars = 2,
       new_notes_location = "current_dir",
     },
+    daily_notes = {
+      folder = "notes",
+      date_format = "%Y%m%d-Note-",
+    },
   },
   config = function(_, opts)
     require("obsidian").setup(opts)
