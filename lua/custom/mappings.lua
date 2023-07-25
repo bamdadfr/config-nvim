@@ -230,6 +230,9 @@ M.abc = {
       opts,
     },
 
+    -- Obsidian new note
+    ["<leader>O"] = { "<cmd> ObsidianToday <CR>", "Obsidian new note", opts },
+
     -- Search for markdown tickbox [ ]
     ["]t"] = { "<cmd>/\\[ \\]<CR>", "", opts },
   },
