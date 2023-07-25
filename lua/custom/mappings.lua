@@ -229,6 +229,9 @@ M.abc = {
       "Obsidian find Obsidian files",
       opts,
     },
+
+    -- Search for markdown tickbox [ ]
+    ["]t"] = { "<cmd>/\\[ \\]<CR>", "", opts },
   },
 
   v = {
