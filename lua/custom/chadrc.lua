@@ -1,7 +1,8 @@
 local M = {}
 
 M.ui = {
-  theme = "catppuccin",
+  theme = "one_light",
+  theme_toggle = { "one_light", "one_light" },
   transparency = true,
   statusline = {
     theme = "minimal",
