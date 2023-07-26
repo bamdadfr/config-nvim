@@ -78,6 +78,7 @@ local lazygit = {
 
 local trouble = {
   "folke/trouble.nvim",
+  lazy = false,
   dependencies = {
     {
       "folke/todo-comments.nvim",
