@@ -65,6 +65,7 @@ local sources = {
       "yaml",
       "graphql",
       "handlebars",
+      "markdown",
     },
   },
 
