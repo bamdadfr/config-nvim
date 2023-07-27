@@ -1,3 +1,4 @@
+local Util = require("lazyvim.util")
 local map = require("utils.map")
 
 -----------------
@@ -15,6 +16,12 @@ map("n", "<leader>x", close_buffer.command, { desc = "Close buffer", remap = tru
 local write_buffer = { command = "<cmd>w<cr>", description = "Write buffer" }
 map("n", "<A-s>", write_buffer.command, { desc = write_buffer.description, remap = true })
 map("n", "<leader>s", write_buffer.command, { desc = write_buffer.description, remap = true })
+
+-- Telescope
+map("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Find recent files", remap = true })
+
+local telescope_oldfiles_cwd = Util.telescope("oldfiles", { cwd = vim.loop.cwd() })
+map("n", "<leader>fO", telescope_oldfiles_cwd, { desc = "Find recent files in cwd", remap = true })
 
 -- Navigation
 map("n", "à", "0", { desc = "Go to beginning of line", remap = true })
