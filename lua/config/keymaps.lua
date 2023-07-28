@@ -73,6 +73,12 @@ map("n", "J", "mzJ`z", { desc = "Merge next line while maintaining cursor positi
 -- Insert mode --
 -----------------
 
+-- Basic movements
+map("i", "<A-h>", "<Left>", { desc = "Move left", remap = true })
+map("i", "<A-l>", "<Right>", { desc = "Move right", remap = true })
+map("i", "<A-k>", "<Up>", { desc = "Move up", remap = true })
+map("i", "<A-j>", "<Down>", { desc = "Move down", remap = true })
+
 -- Motions
 map("i", "<A-z>", "<C-w>", { desc = "Delete word", remap = true })
 
