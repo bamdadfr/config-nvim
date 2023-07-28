@@ -19,7 +19,6 @@ local map = require("utils.map")
 map("n", "<leader>o", "<cmd>echo 'test'<cr>", { desc = "Echo test", remap = true })
 
 local close_buffer = { command = "<cmd>bdelete<cr>", description = "Close buffer" }
-map("n", "<A-w>", close_buffer.command, { desc = close_buffer.description, remap = true })
 map("n", "<A-x>", close_buffer.command, { desc = close_buffer.description, remap = true })
 map("n", "<leader>x", close_buffer.command, { desc = "Close buffer", remap = true })
 
@@ -69,6 +68,10 @@ map("n", "viZ", "viW", { remap = true })
 
 -- Motions
 map("n", "J", "mzJ`z", { desc = "Merge next line while maintaining cursor position", remap = true })
+
+-- Windows
+map("n", "<leader>$", "<C-w>v", { desc = "Split window vertically", remap = true })
+map("n", "<A-w>", "<C-w>c", { desc = "Close window", remap = true })
 
 -----------------
 -- Insert mode --
