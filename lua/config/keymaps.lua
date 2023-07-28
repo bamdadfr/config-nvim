@@ -5,7 +5,8 @@ local map = require("utils.map")
 -- https://www.lazyvim.org/keymaps
 
 -- Default editor keymaps
--- https://github.com/LazyVim/LazyVim/blob/9264c54ae96d1d56f029ad9b561326c7b991c53b/lua/lazyvim/plugins/editor.lua
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/editor.lua
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/lsp/keymaps.lua
 
 -- Disable keymaps
 -- https://www.lazyvim.org/configuration/plugins#%EF%B8%8F-adding--disabling-plugin-keymaps
