@@ -1,17 +1,24 @@
-local command = function()
-  require("neo-tree.command").execute({
-    toggle = true,
-    position = "right",
-  })
-end
+local toggle = {
+  command = function()
+    require("neo-tree.command").execute({
+      toggle = true,
+      position = "right",
+    })
+  end,
+  description = "Toggle Neotree",
+}
 
-local description = "Toggle Neotree"
+local focus = {
+  command = "<cmd>Neotree focus right<cr>",
+  description = "Focus Neotree",
+}
 
 return {
   "nvim-neo-tree/neo-tree.nvim",
   keys = {
-    { "<A-&>", command, desc = description },
-    { "<A-e>", command, desc = description },
-    { "<leader>&", command, desc = description },
+    { "<A-&>", toggle.command, desc = toggle.description },
+    { "<leader>&", toggle.command, desc = toggle.description },
+    { "<A-e>", focus.command, desc = focus.description },
+    { "<leader>e", focus.command, desc = focus.description },
   },
 }
