@@ -57,6 +57,10 @@ map("n", "<A-i>", "<C-i>zz", { desc = "Navigate to next location", remap = true 
 map("n", "<leader>$", "<C-w>v", { desc = "Split window vertically", remap = true })
 map("n", "<A-w>", "<C-w>c", { desc = "Close window", remap = true })
 
+-- Search results
+map("n", "n", "nzzzv", { desc = "Go to next search result and keep cursor centered", remap = true })
+map("n", "N", "Nzzzv", { desc = "Go to previous search result and keep cursor centered", remap = true })
+
 -- Motions
 
 -- Next word
