@@ -32,10 +32,22 @@ map("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Find recent file
 local telescope_oldfiles_cwd = Util.telescope("oldfiles", { cwd = vim.loop.cwd() })
 map("n", "<leader>fO", telescope_oldfiles_cwd, { desc = "Find recent files in cwd", remap = true })
 
+-- Number row for azerty
+map("n", "&", "1", { remap = true })
+map("n", "é", "2", { remap = true })
+map("n", '"', "3", { remap = true })
+map("n", "'", "4", { remap = true })
+map("n", "(", "5", { remap = true })
+map("n", "-", "6", { remap = true })
+map("n", "è", "7", { remap = true })
+map("n", "_", "8", { remap = true })
+map("n", "ç", "9", { remap = true })
+map("n", "à", "0", { remap = true })
+map("n", ")", "_", { remap = true })
+
 -- Navigation
 map("n", "<tab>", "<cmd>bnext<cr>", { desc = "Go to next buffer", remap = true })
 map("n", "<S-tab>", "<cmd>bprev<cr>", { desc = "Go to prev buffer", remap = true })
-map("n", "à", "0", { desc = "Go to beginning of line", remap = true })
 map("n", "<A-d>", "<C-d>zz", { desc = "Move block down", remap = true })
 map("n", "<A-u>", "<C-u>zz", { desc = "Move block up", remap = true })
 map("n", "<A-o>", "<C-o>zz", { desc = "Navigate to previous location", remap = true })
