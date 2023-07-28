@@ -127,4 +127,49 @@ map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move visual block down", remap = tru
 -- Plugins --
 -------------
 
+-- Renamer
 map("n", "<leader>ra", vim.lsp.buf.rename, { desc = "Rename", remap = true })
+
+-- Gitsigns
+local gitsigns = {
+  next = {
+    command = function()
+      vim.schedule(function()
+        require("gitsigns").next_hunk()
+      end)
+    end,
+    description = "Go to next hunk",
+  },
+  previous = {
+    command = function()
+      vim.schedule(function()
+        require("gitsigns").prev_hunk()
+      end)
+    end,
+    description = "Go to previous hunk",
+  },
+  reset = {
+    command = function()
+      require("gitsigns").reset_hunk()
+    end,
+    description = "Reset hunk",
+  },
+  preview = {
+    command = function()
+      require("gitsigns").preview_hunk()
+    end,
+    description = "Preview hunk",
+  },
+  blame = {
+    command = function()
+      require("gitsigns").blame_line()
+    end,
+    description = "Git blame",
+  },
+}
+
+map("n", "]c", gitsigns.next.command, { desc = gitsigns.next.description, remap = true })
+map("n", "[c", gitsigns.previous.command, { desc = gitsigns.previous.description, remap = true })
+map("n", "<leader>rh", gitsigns.reset.command, { desc = gitsigns.reset.description, remap = true })
+map("n", "<leader>ph", gitsigns.preview.command, { desc = gitsigns.preview.description, remap = true })
+map("n", "<leader>gb", gitsigns.blame.command, { desc = gitsigns.blame.description, remap = true })
