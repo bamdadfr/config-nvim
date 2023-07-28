@@ -27,6 +27,8 @@ local write_buffer = { command = "<cmd>w<cr>", description = "Write buffer" }
 map("n", "<A-s>", write_buffer.command, { desc = write_buffer.description, remap = true })
 map("n", "<leader>s", write_buffer.command, { desc = write_buffer.description, remap = true })
 
+map("n", "<A-S-x>", "<cmd> %bd|e#|bd# <cr>", { desc = "Close all buffers except current", remap = true })
+
 -- Window splits
 map("n", "<leader>$", "<C-w>v", { desc = "Split window vertically", remap = true })
 map("n", "<A-w>", "<C-w>c", { desc = "Close split window", remap = true })
