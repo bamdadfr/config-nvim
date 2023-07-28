@@ -63,6 +63,10 @@ map("n", "<A-i>", "<C-i>zz", { desc = "Navigate to next location", remap = true 
 map("n", "n", "nzzzv", { desc = "Go to next search result and keep cursor centered", remap = true })
 map("n", "N", "Nzzzv", { desc = "Go to previous search result and keep cursor centered", remap = true })
 
+-- Selection
+map("n", "<C-a>", "ggVG", { desc = "Select all", remap = true })
+map("n", "<C-c>", "<cmd> %y+ <cr>", { desc = "Copy all", remap = true })
+
 -- Motions
 
 -- Next word
