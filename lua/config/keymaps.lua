@@ -53,8 +53,13 @@ map("n", "<A-u>", "<C-u>zz", { desc = "Move block up", remap = true })
 map("n", "<A-o>", "<C-o>zz", { desc = "Navigate to previous location", remap = true })
 map("n", "<A-i>", "<C-i>zz", { desc = "Navigate to next location", remap = true })
 
--- Azerty: bind `z` to `w`
--- Motion
+-- Windows
+map("n", "<leader>$", "<C-w>v", { desc = "Split window vertically", remap = true })
+map("n", "<A-w>", "<C-w>c", { desc = "Close window", remap = true })
+
+-- Motions
+
+-- Next word
 map("n", "z", "w", { remap = true })
 map("n", "Z", "W", { remap = true })
 
@@ -78,12 +83,8 @@ map("n", "vZ", "vW", { remap = true })
 map("n", "viz", "viw", { remap = true })
 map("n", "viZ", "viW", { remap = true })
 
--- Motions
+-- Merge
 map("n", "J", "mzJ`z", { desc = "Merge next line while maintaining cursor position", remap = true })
-
--- Windows
-map("n", "<leader>$", "<C-w>v", { desc = "Split window vertically", remap = true })
-map("n", "<A-w>", "<C-w>c", { desc = "Close window", remap = true })
 
 -----------------
 -- Insert mode --
