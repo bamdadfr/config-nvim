@@ -1,6 +1,9 @@
 local Util = require("lazyvim.util")
 local map = require("utils.map")
 
+-- Default editor configuration
+-- https://github.com/LazyVim/LazyVim/blob/9264c54ae96d1d56f029ad9b561326c7b991c53b/lua/lazyvim/plugins/editor.lua
+
 -----------------
 -- Normal mode --
 -----------------
@@ -22,6 +25,20 @@ map("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Find recent file
 
 local telescope_oldfiles_cwd = Util.telescope("oldfiles", { cwd = vim.loop.cwd() })
 map("n", "<leader>fO", telescope_oldfiles_cwd, { desc = "Find recent files in cwd", remap = true })
+
+-- Neotree
+local neotree_toggle = {
+  command = function()
+    require("neo-tree.command").execute({
+      toggle = true,
+      position = "right",
+    })
+  end,
+  description = "Toggle Neotree",
+}
+map("n", "<leader>&", neotree_toggle.command, { desc = neotree_toggle.description, remap = true })
+map("n", "<A-&>", neotree_toggle.command, { desc = neotree_toggle.description, remap = true })
+map("n", "<A-e>", neotree_toggle.command, { desc = neotree_toggle.description, remap = true })
 
 -- Navigation
 map("n", "à", "0", { desc = "Go to beginning of line", remap = true })
