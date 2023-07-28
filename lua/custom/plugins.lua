@@ -221,6 +221,7 @@ local obsidian = {
       folder = "notes",
       date_format = "%Y%m%d-Note-",
     },
+    mappings = {},
   },
   config = function(_, opts)
     require("obsidian").setup(opts)
