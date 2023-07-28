@@ -2,9 +2,11 @@ return {
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
-      table.insert(opts.ensure_installed, "isort")
-      table.insert(opts.ensure_installed, "black")
-      table.insert(opts.ensure_installed, "flake8")
+      vim.list_extend(opts.ensure_installed, {
+        "isort",
+        "black",
+        "flake8",
+      })
     end,
   },
   {
