@@ -2,7 +2,26 @@ return {
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
-      table.insert(opts.ensure_installed, "vue-language-server")
+      vim.list_extend(opts.ensure_installed, {
+        "vue-language-server",
+      })
     end,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      setup = {
+        volar = function(_, opts)
+          require("lspconfig").volar.setup({
+            server = opts,
+            filetypes = {
+              "vue",
+              "typescript",
+              "javascript",
+            },
+          })
+        end,
+      },
+    },
   },
 }
