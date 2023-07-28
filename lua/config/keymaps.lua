@@ -33,6 +33,8 @@ local telescope_oldfiles_cwd = Util.telescope("oldfiles", { cwd = vim.loop.cwd()
 map("n", "<leader>fO", telescope_oldfiles_cwd, { desc = "Find recent files in cwd", remap = true })
 
 -- Navigation
+map("n", "<tab>", "<cmd>bnext<cr>", { desc = "Go to next buffer", remap = true })
+map("n", "<S-tab>", "<cmd>bprev<cr>", { desc = "Go to prev buffer", remap = true })
 map("n", "à", "0", { desc = "Go to beginning of line", remap = true })
 map("n", "<A-d>", "<C-d>zz", { desc = "Move block down", remap = true })
 map("n", "<A-u>", "<C-u>zz", { desc = "Move block up", remap = true })
