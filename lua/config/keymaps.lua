@@ -1,7 +1,10 @@
 local Util = require("lazyvim.util")
 local map = require("utils.map")
 
--- Default editor configuration
+-- Documentation
+-- https://www.lazyvim.org/keymaps
+
+-- Default editor keymaps
 -- https://github.com/LazyVim/LazyVim/blob/9264c54ae96d1d56f029ad9b561326c7b991c53b/lua/lazyvim/plugins/editor.lua
 
 -----------------
