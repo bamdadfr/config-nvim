@@ -18,6 +18,7 @@ local map = require("utils.map")
 -- General
 map("n", "<leader>o", "<cmd>echo 'test'<cr>", { desc = "Echo test", remap = true })
 
+-- Buffers
 local close_buffer = { command = "<cmd>bdelete<cr>", description = "Close buffer" }
 map("n", "<A-x>", close_buffer.command, { desc = close_buffer.description, remap = true })
 map("n", "<leader>x", close_buffer.command, { desc = "Close buffer", remap = true })
@@ -25,6 +26,11 @@ map("n", "<leader>x", close_buffer.command, { desc = "Close buffer", remap = tru
 local write_buffer = { command = "<cmd>w<cr>", description = "Write buffer" }
 map("n", "<A-s>", write_buffer.command, { desc = write_buffer.description, remap = true })
 map("n", "<leader>s", write_buffer.command, { desc = write_buffer.description, remap = true })
+
+-- Window splits
+map("n", "<leader>$", "<C-w>v", { desc = "Split window vertically", remap = true })
+map("n", "<A-w>", "<C-w>c", { desc = "Close split window", remap = true })
+map("n", "<leader>w", "<C-w>c", { desc = "Close split window", remap = true })
 
 -- Telescope
 map("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Find recent files", remap = true })
@@ -52,10 +58,6 @@ map("n", "<A-d>", "<C-d>zz", { desc = "Move block down", remap = true })
 map("n", "<A-u>", "<C-u>zz", { desc = "Move block up", remap = true })
 map("n", "<A-o>", "<C-o>zz", { desc = "Navigate to previous location", remap = true })
 map("n", "<A-i>", "<C-i>zz", { desc = "Navigate to next location", remap = true })
-
--- Windows
-map("n", "<leader>$", "<C-w>v", { desc = "Split window vertically", remap = true })
-map("n", "<A-w>", "<C-w>c", { desc = "Close window", remap = true })
 
 -- Search results
 map("n", "n", "nzzzv", { desc = "Go to next search result and keep cursor centered", remap = true })
