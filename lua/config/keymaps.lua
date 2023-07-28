@@ -90,3 +90,9 @@ map("i", "<A-z>", "<C-w>", { desc = "Delete word", remap = true })
 -- Motions
 map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move visual block up", remap = true })
 map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move visual block down", remap = true })
+
+-------------
+-- Plugins --
+-------------
+
+map("n", "<leader>ra", vim.lsp.buf.rename, { desc = "Rename", remap = true })
