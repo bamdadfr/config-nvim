@@ -40,6 +40,8 @@ map("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Find recent file
 local telescope_oldfiles_cwd = Util.telescope("oldfiles", { cwd = vim.loop.cwd() })
 map("n", "<leader>fO", telescope_oldfiles_cwd, { desc = "Find recent files in cwd", remap = true })
 
+map("n", "<leader>fw", Util.telescope("live_grep"), { desc = "Find grep", remap = true })
+
 -- Number row for azerty
 map("n", "&", "1", { remap = true })
 map("n", "é", "2", { remap = true })
