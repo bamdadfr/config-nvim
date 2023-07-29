@@ -15,9 +15,6 @@ local map = require("utils.map")
 -- Normal mode --
 -----------------
 
--- General
-map("n", "<leader>o", "<cmd>echo 'test'<cr>", { desc = "Echo test", remap = true })
-
 -- Buffers
 local close_buffer = { command = "<cmd>bdelete<cr>", description = "Close buffer" }
 map("n", "<A-x>", close_buffer.command, { desc = close_buffer.description, remap = true })
