@@ -41,7 +41,6 @@ map("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Find recent file
 
 local telescope_oldfiles_cwd = Util.telescope("oldfiles", { cwd = vim.loop.cwd() })
 map("n", "<leader>fO", telescope_oldfiles_cwd, { desc = "Find recent files in cwd", remap = true })
-
 map("n", "<leader>fw", Util.telescope("live_grep"), { desc = "Find grep", remap = true })
 
 -- Number row for azerty
@@ -75,29 +74,43 @@ map("n", "<C-c>", "<cmd> %y+ <cr>", { desc = "Copy all", remap = true })
 
 -- Motions
 
+-- Delete writes to register `a`
+map({ "n", "v" }, "d", '"ad', { noremap = true })
+
+-- Backspace writes to black hole register
+map({ "n", "v" }, "x", '"_x', { noremap = true })
+
 -- Next word
-map("n", "z", "w", { remap = true })
-map("n", "Z", "W", { remap = true })
+map("n", "z", "w", { noremap = true })
+map("n", "Z", "W", { noremap = true })
 
 -- Cut word
-map("n", "cz", "cw", { remap = true })
-map("n", "cZ", "cW", { remap = true })
+map("n", "cz", "cw", { noremap = true })
+map("n", "cZ", "cW", { noremap = true })
 
 -- Cut inside word
-map("n", "ciz", "ciw", { remap = true })
-map("n", "ciZ", "ciW", { remap = true })
+map("n", "ciz", "ciw", { noremap = true })
+map("n", "ciZ", "ciW", { noremap = true })
 
 -- Delete word
-map("n", "dz", "dw", { remap = true })
-map("n", "dZ", "dW", { remap = true })
+map("n", "dz", '"adw', { noremap = true })
+map("n", "dZ", '"adW', { noremap = true })
+
+-- Delete inside word
+map("n", "diz", '"adiw', { noremap = true })
+map("n", "diZ", '"adiw', { noremap = true })
 
 -- Visualize word
-map("n", "vz", "vw", { remap = true })
-map("n", "vZ", "vW", { remap = true })
+map("n", "vz", "vw", { noremap = true })
+map("n", "vZ", "vW", { noremap = true })
 
 -- Visualize inside word
-map("n", "viz", "viw", { remap = true })
-map("n", "viZ", "viW", { remap = true })
+map("n", "viz", "viw", { noremap = true })
+map("n", "viZ", "viW", { noremap = true })
+
+-- Paste from register `a`
+map({ "n", "v" }, "<leader>p", '"ap', { noremap = true })
+map({ "n", "v" }, "<leader>P", '"aP', { noremap = true })
 
 -- Merge
 map("n", "J", "mzJ`z", { desc = "Merge next line while maintaining cursor position", remap = true })
