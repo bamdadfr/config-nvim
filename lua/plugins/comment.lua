@@ -1,12 +1,12 @@
 return {
   "numToStr/Comment.nvim",
-  lazy = false,
   keys = {
     {
       "<leader>:",
       function()
         require("Comment.api").toggle.linewise.current()
       end,
+      mode = "n",
     },
     {
       "<leader>:",
