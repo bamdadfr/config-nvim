@@ -4,6 +4,7 @@ return {
     "nvim-neotest/neotest",
     dependencies = {
       "haydenmeade/neotest-jest",
+      "marilari88/neotest-vitest",
     },
     opts = function(_, opts)
       -- neotest-plenary
@@ -21,6 +22,9 @@ return {
           end,
         })
       )
+
+      -- neotest-vitest
+      table.insert(opts.adapters, require("neotest-vitest"))
     end,
     keys = {
       {
