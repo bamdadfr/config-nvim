@@ -29,12 +29,16 @@ map("n", "<leader>s", write_buffer.command, { desc = write_buffer.description, r
 
 map("n", "<A-S-x>", "<cmd> %bd|e#|bd# <cr>", { desc = "Close all buffers except current", remap = true })
 
--- Windows
+-- Windows management
 map("n", "<leader>$", "<C-w>v", { desc = "Split window vertically", remap = true })
 map("n", "<A-w>", "<C-w>c", { desc = "Close split window", remap = true })
 map("n", "<leader>w", "<C-w>c", { desc = "Close split window", remap = true })
+
+-- Windows navigation
 map("n", "<A-l>", "<C-w>l", { desc = "Go to right window", remap = true })
 map("n", "<A-h>", "<C-w>h", { desc = "Go to left window", remap = true })
+map("n", "<A-k>", "<C-w>k", { desc = "Go to above window", remap = true })
+map("n", "<A-j>", "<C-w>j", { desc = "Go to below window", remap = true })
 
 -- Telescope
 map("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Find recent files", remap = true })
