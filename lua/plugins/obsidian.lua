@@ -30,5 +30,6 @@ return {
     { "<leader>or", "<cmd> ObsidianBacklinks <cr>", { desc = "Show Obsidian references", remap = true } },
     { "<leader>of", "<cmd> ObsidianQuickSwitch <cr>", { desc = "Find Obsidian notes", remap = true } },
     { "<leader>oo", "<cmd> ObsidianToday <cr>", { desc = "Create Obsidian note", remap = true } },
+    { "<leader>ow", "<cmd> ObsidianSearch <cr>", { desc = "Search Obsidian (grep)", remap = true } },
   },
 }
