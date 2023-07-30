@@ -73,6 +73,9 @@ map("n", "N", "Nzzzv", { desc = "Go to previous search result and keep cursor ce
 map("n", "<C-a>", "ggVG", { desc = "Select all", remap = true })
 map("n", "<C-c>", "<cmd> %y+ <cr>", { desc = "Copy all", remap = true })
 
+-- Find [ ]
+map("n", "]T", "<cmd> /\\[ \\] <cr>", { desc = "Find [ ]", remap = true })
+
 -- Motions
 
 -- Delete writes to register `a`
