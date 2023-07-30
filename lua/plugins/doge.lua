@@ -5,7 +5,7 @@ return {
     { "<leader>gk", "<cmd> DogeGenerate <cr>", desc = "Generate documentation" },
   },
   config = function()
-    vim.cmd([[call doge#install()]])
+    vim.cmd([[silent! call doge#install()]])
     vim.cmd([[let g:doge_doc_standard_python = "google"]])
   end,
 }
