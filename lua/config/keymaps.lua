@@ -1,4 +1,3 @@
-local Util = require("lazyvim.util")
 local map = require("utils.map")
 
 -- Documentation
@@ -37,13 +36,6 @@ map("n", "<A-l>", "<C-w>l", { desc = "Go to right window", remap = true })
 map("n", "<A-h>", "<C-w>h", { desc = "Go to left window", remap = true })
 map("n", "<A-k>", "<C-w>k", { desc = "Go to above window", remap = true })
 map("n", "<A-j>", "<C-w>j", { desc = "Go to below window", remap = true })
-
--- Telescope
-map("n", "<leader>fo", "<cmd> Telescope oldfiles <cr>", { desc = "Find recent files (all)", remap = true })
-
-local telescope_oldfiles_cwd = Util.telescope("oldfiles", { cwd = vim.loop.cwd() })
-map("n", "<leader>fO", telescope_oldfiles_cwd, { desc = "Find recent files (cwd)", remap = true })
-map("n", "<leader>fw", Util.telescope("live_grep"), { desc = "Find grep", remap = true })
 
 -- Number row for azerty
 map("n", "&", "1", { remap = true })
