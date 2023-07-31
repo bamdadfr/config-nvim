@@ -26,6 +26,7 @@ return {
       position = "right",
       width = 50,
     },
+    log_level = "warn",
   },
   config = function(_, opts)
     require("neo-tree").setup(opts)
