@@ -6,7 +6,6 @@ return {
       function()
         require("Comment.api").toggle.linewise.current()
       end,
-      mode = "n",
     },
     {
       "<leader>:",
