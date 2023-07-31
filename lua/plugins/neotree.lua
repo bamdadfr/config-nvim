@@ -21,12 +21,13 @@ return {
     { "<A-e>", focus.command, desc = focus.description },
     { "<leader>e", focus.command, desc = focus.description },
   },
-  config = function()
-    require("neo-tree").setup({
-      window = {
-        position = "right",
-        width = 50,
-      },
-    })
+  opts = {
+    window = {
+      position = "right",
+      width = 50,
+    },
+  },
+  config = function(_, opts)
+    require("neo-tree").setup(opts)
   end,
 }
