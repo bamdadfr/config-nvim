@@ -28,6 +28,7 @@ map("n", "<A-S-x>", "<cmd> %bd|e#|bd# <cr>", { desc = "Close all buffers except 
 
 -- Windows management
 map("n", "<leader>$", "<C-w>v", { desc = "Split window vertically", remap = true })
+map("n", "<leader>*", "<C-w>s", { desc = "Split window horizontally", remap = true })
 map("n", "<A-w>", "<C-w>c", { desc = "Close split window", remap = true })
 map("n", "<leader>w", "<C-w>c", { desc = "Close split window", remap = true })
 
