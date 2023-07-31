@@ -60,8 +60,8 @@ map("n", ")", "_", { remap = true })
 -- Navigation
 map("n", "<tab>", "<cmd>bnext<cr>", { desc = "Go to next buffer", remap = true })
 map("n", "<S-tab>", "<cmd>bprev<cr>", { desc = "Go to prev buffer", remap = true })
-map("n", "<A-d>", "<C-d>zz", { desc = "Move block down", remap = true })
-map("n", "<A-u>", "<C-u>zz", { desc = "Move block up", remap = true })
+map({ "n", "v" }, "<A-d>", "<C-d>zz", { desc = "Move block down", remap = true })
+map({ "n", "v" }, "<A-u>", "<C-u>zz", { desc = "Move block up", remap = true })
 map("n", "<A-o>", "<C-o>zz", { desc = "Navigate to previous location", remap = true })
 map("n", "<A-i>", "<C-i>zz", { desc = "Navigate to next location", remap = true })
 
