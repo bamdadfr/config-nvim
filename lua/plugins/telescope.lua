@@ -4,6 +4,7 @@ return {
   "nvim-telescope/telescope.nvim",
   keys = {
     -- Grep
+    { "<leader>:", false },
     { "<leader>fw", Util.telescope("live_grep"), desc = "Find grep", remap = true },
     -- Files
     { "<leader>ff", Util.telescope("files", { cwd = false }), desc = "Find files (all)", remap = true },
