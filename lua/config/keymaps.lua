@@ -137,6 +137,10 @@ map("i", "<A-z>", "<C-w>", { desc = "Delete word", remap = true })
 map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move visual block up", remap = true })
 map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move visual block down", remap = true })
 
+-- Indentations
+map("v", "<", ">")
+map("v", ">", "<")
+
 -------------
 -- Plugins --
 -------------
