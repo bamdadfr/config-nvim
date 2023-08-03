@@ -1,5 +1,5 @@
 return {
-  "epwalsh/obsidian.nvim",
+  "bamdadsabbagh/obsidian.nvim",
   lazy = false,
   event = {
     "BufReadPre " .. vim.fn.expand("~") .. "/OneDrive/00-sync/obsidian/**.md",
