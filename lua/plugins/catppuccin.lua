@@ -2,11 +2,11 @@ return {
   "catppuccin/nvim",
   config = function()
     require("catppuccin").setup({
-      flavour = "mocha",
+      flavour = "latte",
       transparent_background = true,
     })
 
-    vim.cmd.colorscheme("catppuccin-mocha")
+    vim.cmd.colorscheme("catppuccin-latte")
 
     require("notify").setup({
       background_colour = "#000000",
