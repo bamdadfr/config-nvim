@@ -72,7 +72,7 @@ map("n", "]T", "<cmd> /\\[ \\] <cr>", { desc = "Find [ ]", remap = true })
 -- Motions
 
 -- Delete writes to register `a`
-map({ "n", "v" }, "d", '"ad', { noremap = true })
+map("n", "d", '"ad', { noremap = true })
 
 -- Backspace writes to black hole register
 map({ "n", "v" }, "x", '"_x', { noremap = true })
