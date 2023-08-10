@@ -6,6 +6,7 @@ return {
         "proselint",
         "alex",
         "markdownlint",
+        "marksman",
       })
     end,
   },
