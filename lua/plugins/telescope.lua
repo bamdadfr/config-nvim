@@ -5,7 +5,7 @@ return {
   keys = {
     -- Grep
     { "<leader>:", false },
-    { "<leader>fw", Util.telescope("live_grep"), desc = "Find grep", remap = true },
+    { "<leader>fw", Util.telescope("live_grep", { cwd = false }), desc = "Find grep", remap = true },
     -- Files
     { "<leader>ff", Util.telescope("files", { cwd = false }), desc = "Find files (all)", remap = true },
     { "<leader>fF", Util.telescope("files"), desc = "Find files (cwd)", remap = true },
