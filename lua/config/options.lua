@@ -11,3 +11,6 @@ vim.cmd([[set conceallevel=0]])
 -- Set spell languages (not working because can't write to snap directory)
 -- /snap/nvim/2809/usr/share/nvim/runtime/spell
 -- vim.opt.spelllang = { "fr" }
+
+-- Set python3
+vim.cmd([[let g:python3_host_prog = "/usr/bin/python3.10"]])
