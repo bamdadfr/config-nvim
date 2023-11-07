@@ -14,6 +14,3 @@ vim.cmd([[set conceallevel=0]])
 
 -- Set python3
 vim.cmd([[let g:python3_host_prog = "/usr/bin/python3.10"]])
-
--- Set lsp formatting timeout
-vim.lsp.buf.format({ timeout_ms = 2000 })
