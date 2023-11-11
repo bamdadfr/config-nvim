@@ -12,6 +12,7 @@ return {
     opts = function(_, opts)
       local nls = require("null-ls")
       table.insert(opts.sources, nls.builtins.diagnostics.markdownlint)
+      table.insert(opts.sources, nls.builtins.formatting.markdownlint)
     end,
   },
 }

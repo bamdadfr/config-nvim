@@ -4,7 +4,6 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "stylua",
-        "markdownlint",
         "prettierd",
         "isort",
         "black",
@@ -27,7 +26,7 @@ return {
 
       opts.formatters_by_ft = {
         lua = { "stylua" },
-        markdown = { "markdownlint", "prettierd" },
+        markdown = { "prettierd" },
         python = { "isort", "black" },
       }
 
