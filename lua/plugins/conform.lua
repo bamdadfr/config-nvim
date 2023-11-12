@@ -8,6 +8,8 @@ return {
         "prettierd",
         "isort",
         "black",
+        "vue-language-server",
+        "typescript-language-server",
       })
     end,
   },
