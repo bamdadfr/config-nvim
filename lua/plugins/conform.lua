@@ -10,6 +10,7 @@ return {
         "black",
         "vue-language-server",
         "typescript-language-server",
+        "yamlfix",
       })
     end,
   },
@@ -22,6 +23,9 @@ return {
       local conform = require("conform")
       conform.formatters_by_ft.lua = { "stylua" }
       conform.formatters_by_ft.markdown = { "markdownlint", "prettierd" }
+
+      -- yaml
+      conform.formatters_by_ft.yaml = { "prettierd", "yamlfix" }
 
       -- python
       conform.formatters_by_ft.python = { "isort", "black" }
