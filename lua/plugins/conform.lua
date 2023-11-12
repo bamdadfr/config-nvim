@@ -22,6 +22,7 @@ return {
       conform.formatters_by_ft.markdown = { "markdownlint", "prettierd" }
       conform.formatters_by_ft.python = { "isort", "black" }
       conform.formatters_by_ft.vue = { "prettierd" }
+      conform.formatters_by_ft.javascript = { "prettierd" }
       conform.formatters_by_ft.typescript = { "prettierd" }
     end,
   },
