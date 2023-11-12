@@ -4,6 +4,7 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "stylua",
+        "markdownlint",
         "prettierd",
         "isort",
         "black",
@@ -17,20 +18,11 @@ return {
     cmd = "ConformInfo",
     opts = function(_, opts)
       local conform = require("conform")
-
-      opts.format = {
-        timeout_ms = 2000,
-        async = false,
-        quiet = false,
-      }
-
-      opts.formatters_by_ft = {
-        lua = { "stylua" },
-        markdown = { "prettierd" },
-        python = { "isort", "black" },
-      }
-
-      conform.setup(opts)
+      conform.formatters_by_ft.lua = { "stylua" }
+      conform.formatters_by_ft.markdown = { "markdownlint", "prettierd" }
+      conform.formatters_by_ft.python = { "isort", "black" }
+      conform.formatters_by_ft.vue = { "prettierd" }
+      conform.formatters_by_ft.typescript = { "prettierd" }
     end,
   },
 }
