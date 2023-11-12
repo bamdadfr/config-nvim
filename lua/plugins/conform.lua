@@ -18,7 +18,7 @@ return {
     dependencies = { "mason.nvim" },
     lazy = true,
     cmd = "ConformInfo",
-    opts = function(_, opts)
+    opts = function()
       local conform = require("conform")
       conform.formatters_by_ft.lua = { "stylua" }
       conform.formatters_by_ft.markdown = { "markdownlint", "prettierd" }
@@ -26,6 +26,8 @@ return {
       conform.formatters_by_ft.vue = { "prettierd" }
       conform.formatters_by_ft.javascript = { "prettierd" }
       conform.formatters_by_ft.typescript = { "prettierd" }
+      conform.formatters_by_ft.javascriptreact = { "prettierd" }
+      conform.formatters_by_ft.typescriptreact = { "prettierd" }
     end,
   },
 }
