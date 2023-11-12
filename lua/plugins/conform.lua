@@ -21,6 +21,7 @@ return {
     cmd = "ConformInfo",
     opts = function()
       local conform = require("conform")
+      conform.formatters_by_ft.fish = { "fish_indent" }
       conform.formatters_by_ft.lua = { "stylua" }
       conform.formatters_by_ft.markdown = { "markdownlint", "prettierd" }
 
