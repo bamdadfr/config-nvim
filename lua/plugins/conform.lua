@@ -22,12 +22,21 @@ return {
       local conform = require("conform")
       conform.formatters_by_ft.lua = { "stylua" }
       conform.formatters_by_ft.markdown = { "markdownlint", "prettierd" }
+
+      -- python
       conform.formatters_by_ft.python = { "isort", "black" }
-      conform.formatters_by_ft.vue = { "prettierd" }
+
+      -- javascript
       conform.formatters_by_ft.javascript = { "prettierd" }
       conform.formatters_by_ft.typescript = { "prettierd" }
+
+      -- vue
+      conform.formatters_by_ft.vue = { "prettierd" }
+
+      -- react
       conform.formatters_by_ft.javascriptreact = { "prettierd" }
       conform.formatters_by_ft.typescriptreact = { "prettierd" }
+      conform.formatters_by_ft.mdx = { "markdownlint", "prettierd" }
     end,
   },
 }
