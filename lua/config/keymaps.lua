@@ -15,7 +15,7 @@ local map = require("utils.map")
 -----------------
 
 -- Buffers
-local close_buffer = { command = "<cmd>bdelete<cr>", description = "Close buffer" }
+local close_buffer = { command = "<cmd><leader>bd<cr>", description = "Close buffer" }
 map("n", "<A-x>", close_buffer.command, { desc = close_buffer.description, remap = true })
 map("n", "<leader>x", close_buffer.command, { desc = "Close buffer", remap = true })
 
@@ -23,7 +23,8 @@ local write_buffer = { command = "<cmd>w<cr>", description = "Write buffer" }
 map("n", "<A-s>", write_buffer.command, { desc = write_buffer.description, remap = true })
 map("n", "<leader>s", write_buffer.command, { desc = write_buffer.description, remap = true })
 
-map("n", "<A-S-x>", "<cmd> %bd|e#|bd# <cr>", { desc = "Close all buffers except current", remap = true })
+-- map("n", "<A-S-x>", "<cmd> %bd|e#|bd# <cr>", { desc = "Close all buffers except current", remap = true })
+map("n", "<A-S-x>", "<cmd>BufferLineCloseOthers<cr>", { desc = "Close all buffers except current", remap = true })
 
 -- Windows management
 map("n", "<leader>$", "<C-w>v", { desc = "Split window vertically", remap = true })
