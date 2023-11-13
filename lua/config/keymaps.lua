@@ -186,6 +186,7 @@ local gitsigns = {
   },
 }
 
+-- gitsigns
 map("n", "]c", gitsigns.next.command, { desc = gitsigns.next.description, remap = true })
 map("n", "[c", gitsigns.previous.command, { desc = gitsigns.previous.description, remap = true })
 map("n", "<leader>rh", gitsigns.reset.command, { desc = gitsigns.reset.description, remap = true })
