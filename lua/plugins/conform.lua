@@ -31,6 +31,9 @@ return {
       -- python
       conform.formatters_by_ft.python = { "isort", "black" }
 
+      -- css
+      conform.formatters_by_ft.css = { "prettierd" }
+
       -- javascript
       conform.formatters_by_ft.javascript = { "prettierd" }
       conform.formatters_by_ft.typescript = { "prettierd" }
