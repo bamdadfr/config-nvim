@@ -10,6 +10,7 @@ return {
         "black",
         "vue-language-server",
         "typescript-language-server",
+        "css-lsp",
         "yamlfix",
       })
     end,
