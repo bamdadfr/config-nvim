@@ -17,5 +17,11 @@ return {
       desc = "Find recent files (cwd)",
       remap = true,
     },
+    {
+      "<leader>fN",
+      "<cmd>Telescope notify<cr>",
+      desc = "Find notifications",
+      remap = true,
+    },
   },
 }
