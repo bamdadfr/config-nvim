@@ -10,6 +10,14 @@ return {
         opts = { skip = true },
       })
 
+      table.insert(opts.routes, {
+        filter = {
+          event = "error",
+          find = "E486: Pattern not found: [ ] ",
+        },
+        opts = { skip = true },
+      })
+
       opts.presets.lsp_doc_border = true
     end,
   },
