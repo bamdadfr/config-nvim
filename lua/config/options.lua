@@ -6,7 +6,7 @@
 vim.cmd([[set formatexpr=markdownfmt#Format]])
 
 -- Disable concealing
-vim.cmd([[set conceallevel=0]])
+-- vim.cmd([[set conceallevel=0]])
 
 -- Set spell languages (not working because can't write to snap directory)
 -- /snap/nvim/2809/usr/share/nvim/runtime/spell
