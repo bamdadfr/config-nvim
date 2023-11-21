@@ -3,11 +3,22 @@ return {
     "catppuccin/nvim",
     config = function()
       require("catppuccin").setup({
-        flavour = "latte",
+        flavour = "mocha",
         transparent_background = true,
+        integrations = {
+          native_lsp = {
+            enabled = true,
+            underlines = {
+              errors = { "undercurl" },
+              hints = { "undercurl" },
+              warnings = { "undercurl" },
+              information = { "undercurl" },
+            },
+          },
+        },
       })
 
-      vim.cmd.colorscheme("catppuccin-latte")
+      vim.cmd.colorscheme("catppuccin-mocha")
 
       require("notify").setup({
         background_colour = "#000000",
