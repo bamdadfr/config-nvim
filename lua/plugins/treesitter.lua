@@ -21,6 +21,7 @@ return {
         "svelte",
         "vue",
         "markdown",
+        "bash",
       },
     },
     config = function(_, opts)
