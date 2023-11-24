@@ -20,6 +20,7 @@ return {
         "sql",
         "svelte",
         "vue",
+        "markdown",
       },
     },
     config = function(_, opts)
