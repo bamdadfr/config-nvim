@@ -14,3 +14,12 @@ vim.cmd([[set conceallevel=0]])
 
 -- Set python3
 vim.cmd([[let g:python3_host_prog = "/usr/bin/python3.10"]])
+
+-- MDX
+vim.filetype.add({
+  extension = {
+    mdx = "mdx",
+  },
+})
+
+vim.treesitter.language.register("markdown", "mdx")
