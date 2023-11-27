@@ -1,5 +1,11 @@
 return {
   {
+    "projekt0n/github-nvim-theme",
+  },
+  {
+    "ellisonleao/gruvbox.nvim",
+  },
+  {
     "catppuccin/nvim",
     config = function()
       require("catppuccin").setup({
@@ -24,11 +30,5 @@ return {
         background_colour = "#000000",
       })
     end,
-  },
-  {
-    "projekt0n/github-nvim-theme",
-  },
-  {
-    "ellisonleao/gruvbox.nvim",
   },
 }
