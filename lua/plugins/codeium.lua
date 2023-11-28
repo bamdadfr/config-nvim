@@ -4,7 +4,7 @@ return {
   config = function()
     vim.g.codeium_disable_bindings = 1
 
-    vim.keymap.set("i", "<C-p>", function()
+    vim.keymap.set("i", "<A-p>", function()
       return vim.fn["codeium#Accept"]()
     end, { expr = true })
 
