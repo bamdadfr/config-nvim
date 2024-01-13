@@ -51,6 +51,13 @@ map("n", "ç", "9", { remap = true })
 map("n", "à", "0", { remap = true })
 map("n", ")", "_", { remap = true })
 
+-- Centering
+map("n", "ww", "zz", { remap = true })
+
+-- Jumping and centering
+-- map("n", "j", "jzz", { remap = true })
+-- map("n", "k", "kzz", { remap = true })
+
 -- Navigation
 map("n", "<tab>", "<cmd>bnext<cr>", { desc = "Go to next buffer", remap = true })
 map("n", "<S-tab>", "<cmd>bprev<cr>", { desc = "Go to prev buffer", remap = true })
