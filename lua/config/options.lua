@@ -23,3 +23,7 @@ vim.filetype.add({
 })
 
 vim.treesitter.language.register("markdown", "mdx")
+
+-- set text wrapping
+vim.cmd([[set wrap]])
+vim.cmd([[set linebreak]])
