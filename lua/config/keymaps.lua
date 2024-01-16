@@ -1,4 +1,5 @@
 local map = require("utils.map")
+local Util = require("lazyvim.util")
 
 -- Documentation
 -- https://www.lazyvim.org/keymaps
@@ -200,3 +201,8 @@ map("n", "[c", gitsigns.previous.command, { desc = gitsigns.previous.description
 map("n", "<leader>rh", gitsigns.reset.command, { desc = gitsigns.reset.description, remap = true })
 map("n", "<leader>ph", gitsigns.preview.command, { desc = gitsigns.preview.description, remap = true })
 map("n", "<leader>gb", gitsigns.blame.command, { desc = gitsigns.blame.description, remap = true })
+
+-- conceallevels
+map("n", "<leader>uc", function()
+  Util.toggle("conceallevel", false, { 0, 1 })
+end, { desc = "Toggle Conceal" })
