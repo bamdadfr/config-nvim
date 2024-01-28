@@ -39,7 +39,7 @@ map("n", "<A-h>", "<C-w>h", { desc = "Go to left window", remap = true })
 map("n", "<A-k>", "<C-w>k", { desc = "Go to above window", remap = true })
 map("n", "<A-j>", "<C-w>j", { desc = "Go to below window", remap = true })
 
--- Number row for azerty
+-- Azerty: symbols to numbers
 map("n", "&", "1", { remap = true })
 map("n", "é", "2", { remap = true })
 map("n", '"', "3", { remap = true })
@@ -51,6 +51,19 @@ map("n", "_", "8", { remap = true })
 map("n", "ç", "9", { remap = true })
 map("n", "à", "0", { remap = true })
 map("n", ")", "_", { remap = true })
+
+-- Azerty: numbers to symbols
+map("n", "1", "&", { remap = true })
+map("n", "2", "é", { remap = true })
+map("n", "3", '"', { remap = true })
+map("n", "4", "'", { remap = true })
+map("n", "5", "(", { remap = true })
+map("n", "6", "-", { remap = true })
+map("n", "7", "è", { remap = true })
+map("n", "8", "_", { remap = true })
+map("n", "9", "ç", { remap = true })
+map("n", "0", "à", { remap = true })
+map("n", "_", ")", { remap = true })
 
 -- Centering
 map("n", "ww", "zz", { remap = true })
