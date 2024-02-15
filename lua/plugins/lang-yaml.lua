@@ -3,7 +3,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
-        "dockerfile",
+        "yaml",
       })
     end,
   },
@@ -11,15 +11,17 @@ return {
     "williamboman/mason.nvim",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
-        "hadolint",
+        "yamlfix",
       })
     end,
   },
   {
-    "nvimtools/none-ls.nvim",
-    opts = function(_, opts)
-      local nls = require("null-ls")
-      table.insert(opts.sources, nls.builtins.diagnostics.hadolint)
-    end,
+    "stevearc/conform.nvim",
+    optional = true,
+    opts = {
+      formatters_by_ft = {
+        yaml = { "prettier", "yamlfix" },
+      },
+    },
   },
 }
