@@ -11,12 +11,12 @@ return {
   {
     "stevearc/conform.nvim",
     optional = true,
-    opts = function(_, opts)
-      vim.list_extend(opts.formatters_by_ft, {
+    opts = {
+      formatters_by_ft = {
         markdown = { "markdownlint", "prettier" },
         mdx = { "markdownlint", "prettier" },
-      })
-    end,
+      },
+    },
   },
   {
     "nvimtools/none-ls.nvim",
