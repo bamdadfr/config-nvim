@@ -12,10 +12,10 @@ return {
   },
   opts = {
     dir = "~/OneDrive/00-sync/obsidian/",
+    new_notes_location = "current_dir",
     completion = {
       nvim_cmp = true,
       min_chars = 2,
-      new_notes_location = "current_dir",
     },
     daily_notes = {
       folder = "notes",
