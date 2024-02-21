@@ -30,6 +30,7 @@ return {
     opts = {
       formatters_by_ft = {
         css = { "prettier" },
+        html = { "prettier" },
         javascript = { "prettier" },
         javascriptreact = { "prettier" },
         typescript = { "prettier" },
