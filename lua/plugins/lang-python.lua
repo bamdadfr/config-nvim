@@ -28,12 +28,13 @@ return {
   },
   {
     "nvimtools/none-ls.nvim",
+    dependencies = {
+      "nvimtools/none-ls-extras.nvim",
+    },
     opts = function(_, opts)
-      local nls = require("null-ls")
-
       table.insert(
         opts.sources,
-        nls.builtins.diagnostics.flake8.with({
+        require("none-ls.diagnostics.flake8").with({
           args = {
             "--format",
             "default",
