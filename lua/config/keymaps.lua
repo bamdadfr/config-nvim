@@ -63,7 +63,7 @@ map("n", "7", "è", { remap = true })
 map("n", "8", "_", { remap = true })
 map("n", "9", "ç", { remap = true })
 map("n", "0", "à", { remap = true })
-map("n", "_", ")", { remap = true })
+map("n", "°", ")", { remap = true })
 
 -- Centering
 map("n", "ww", "zz", { remap = true })
