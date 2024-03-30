@@ -26,6 +26,12 @@ return {
       position = "right",
       width = 50,
     },
+    default_component_configs = {
+      indent = {
+        expander_collapsed = "+",
+        expander_expanded = "-",
+      },
+    },
     log_level = "warn",
   },
   config = function(_, opts)
