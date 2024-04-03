@@ -1,12 +1,8 @@
 return {
   {
-    "projekt0n/github-nvim-theme",
-  },
-  {
-    "ellisonleao/gruvbox.nvim",
-  },
-  {
     "catppuccin/nvim",
+    lazy = false,
+    priority = -1,
     config = function()
       require("catppuccin").setup({
         flavour = "mocha",
