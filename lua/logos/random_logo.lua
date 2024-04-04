@@ -29,6 +29,7 @@ local logos = {
   "lazyvim",
   "spider1",
   "ziggurat",
+  "woman_by_the_sea",
 }
 
 math.randomseed(os.time())
