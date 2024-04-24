@@ -1,5 +1,8 @@
 return {
   {
+    "olivercederborg/poimandres.nvim",
+  },
+  {
     "catppuccin/nvim",
     lazy = false,
     priority = -1,
@@ -20,7 +23,7 @@ return {
         },
       })
 
-      vim.cmd.colorscheme("catppuccin-mocha")
+      vim.cmd.colorscheme("poimandres")
     end,
   },
 }
