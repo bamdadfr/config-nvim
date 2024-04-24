@@ -1,6 +1,15 @@
 return {
   {
     "olivercederborg/poimandres.nvim",
+    lazy = false,
+    priority = -1,
+    config = function()
+      require("poimandres").setup({
+        disable_background = true,
+      })
+
+      vim.cmd.colorscheme("poimandres")
+    end,
   },
   {
     "catppuccin/nvim",
@@ -22,8 +31,6 @@ return {
           },
         },
       })
-
-      vim.cmd.colorscheme("poimandres")
     end,
   },
 }
