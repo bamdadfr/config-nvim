@@ -3,7 +3,7 @@ return {
   -- "bamdadsabbagh/obsidian.nvim",
   lazy = false,
   event = {
-    "BufReadPre " .. vim.fn.expand("~") .. "/OneDrive/00-sync/obsidian/**.md",
+    "BufReadPre " .. vim.fn.expand("~") .. "/Nextcloud/obsidian/**.md",
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -11,7 +11,7 @@ return {
     "nvim-telescope/telescope.nvim",
   },
   opts = {
-    dir = "~/OneDrive/00-sync/obsidian/",
+    dir = "~/Nextcloud/obsidian/",
     new_notes_location = "current_dir",
     completion = {
       nvim_cmp = true,
