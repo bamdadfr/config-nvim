@@ -8,7 +8,7 @@ return {
         disable_background = true,
       })
 
-      vim.cmd.colorscheme("poimandres")
+      vim.cmd.colorscheme("catppuccin-mocha")
     end,
   },
   {
