@@ -1,3 +1,5 @@
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/plugins/extras/editor/harpoon2.lua
+
 return {
   "ThePrimeagen/harpoon",
   branch = "harpoon2",
@@ -31,7 +33,7 @@ return {
     for i = 1, 5 do
       table.insert(keys, {
         -- "<leader>" .. i,
-        "" .. i,
+        tostring(i),
         function()
           require("harpoon"):list():select(i)
         end,
