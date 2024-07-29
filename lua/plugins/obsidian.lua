@@ -21,6 +21,11 @@ return {
       folder = "notes",
       date_format = "%Y%m%d-Note-",
     },
+    templates = {
+      folder = "templates",
+      date_format = "%Y-%m-%d-%a",
+      time_format = "%H:%M",
+    },
     mappings = {},
   },
   config = function(_, opts)
@@ -32,5 +37,6 @@ return {
     { "<leader>of", "<cmd> ObsidianQuickSwitch <cr>", { desc = "Find Obsidian notes", remap = true } },
     { "<leader>oo", "<cmd> ObsidianToday <cr>", { desc = "Create Obsidian note", remap = true } },
     { "<leader>ow", "<cmd> ObsidianSearch <cr>", { desc = "Search Obsidian (grep)", remap = true } },
+    { "<leader>ot", "<cmd> ObsidianTemplate <cr>", { desc = "Use Obsidian template", remap = true } },
   },
 }
