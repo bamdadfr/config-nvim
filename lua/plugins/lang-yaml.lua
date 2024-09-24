@@ -11,7 +11,7 @@ return {
     "williamboman/mason.nvim",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
-        "yamlfix",
+        "yamlfmt",
       })
     end,
   },
@@ -20,7 +20,7 @@ return {
     optional = true,
     opts = {
       formatters_by_ft = {
-        yaml = { "prettier", "yamlfix" },
+        yaml = { "yamlfmt" },
       },
     },
   },
