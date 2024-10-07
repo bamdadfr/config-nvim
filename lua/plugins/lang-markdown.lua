@@ -13,8 +13,8 @@ return {
     optional = true,
     opts = {
       formatters_by_ft = {
-        markdown = { "markdownlint", "prettier" },
-        mdx = { "markdownlint", "prettier" },
+        markdown = { "prettier", "markdownlint" },
+        mdx = { "prettier", "markdownlint" },
       },
     },
   },
