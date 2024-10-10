@@ -2,7 +2,8 @@
 return {
   "stevearc/aerial.nvim",
   keys = {
-    { "<A-é>", "<cmd>AerialToggle<cr>", desc = "Aerial (Symbols)" },
+    { "<A-2>", "<cmd>AerialToggle<cr>", desc = "Aerial (Symbols)" },
+    { "<leader>é", "<cmd>AerialToggle<cr>", desc = "Aerial (Symbols)" },
     { "<leader>fs", "<cmd>Telescope aerial<cr>", desc = "Goto Symbol (Aerial)" },
   },
 }
