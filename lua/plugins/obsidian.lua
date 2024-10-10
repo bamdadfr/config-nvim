@@ -1,9 +1,10 @@
 return {
   "epwalsh/obsidian.nvim",
-  -- "bamdadsabbagh/obsidian.nvim",
-  lazy = false,
+  version = "*",
+  lazy = true,
+  ft = "markdown",
   event = {
-    "BufReadPre " .. vim.fn.expand("~") .. "/Nextcloud/obsidian/**.md",
+    "BufReadPre " .. vim.fn.expand("~") .. "/Nextcloud/obsidian/*.md",
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
