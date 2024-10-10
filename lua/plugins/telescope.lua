@@ -1,22 +1,23 @@
-local Util = require("lazyvim.util")
-
 return {
   "nvim-telescope/telescope.nvim",
   keys = {
     -- Grep
     { "<leader>:", false },
-    { "<leader>fw", Util.pick("live_grep", { cwd = false }), desc = "Find grep", remap = true },
+    { "<leader>fw", LazyVim.pick("live_grep"), desc = "Find grep", remap = true },
+
     -- Files
-    { "<leader>ff", Util.pick("files", { cwd = false }), desc = "Find files (all)", remap = true },
-    { "<leader>fF", Util.pick("files"), desc = "Find files (cwd)", remap = true },
+    -- TODO: Remove?
+    -- { "<leader>ff", LazyVim.pick("files"), desc = "Find files (all)", remap = true },
+    -- { "<leader>fF", LazyVim.pick("files", { cwd = LazyVim.root.git() }), desc = "Find files (cwd)", remap = true },
+
     -- Recent files
-    { "<leader>fo", "<cmd> Telescope oldfiles <cr>", desc = "Find recent files (all)", remap = true },
     {
-      "<leader>fO",
-      Util.pick("oldfiles", { cwd = vim.loop.cwd() }),
+      "<leader>fo",
+      LazyVim.pick("oldfiles", { cwd = LazyVim.root.git() }),
       desc = "Find recent files (cwd)",
       remap = true,
     },
+    { "<leader>fO", "<cmd> Telescope oldfiles <cr>", desc = "Find recent files (all)", remap = true },
     {
       "<leader>fN",
       "<cmd>Telescope notify<cr>",
