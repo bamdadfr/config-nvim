@@ -12,6 +12,9 @@ vim.cmd([[set conceallevel=2]])
 -- /snap/nvim/2809/usr/share/nvim/runtime/spell
 -- vim.opt.spelllang = { "fr" }
 
+-- Disable spelling
+vim.opt.spelllang = {}
+
 -- Set python3
 vim.cmd([[let g:python3_host_prog = "/usr/bin/python3.10"]])
 
