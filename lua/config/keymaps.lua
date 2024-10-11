@@ -89,7 +89,7 @@ map("n", "<C-a>", "ggVG", { desc = "Select all", remap = true })
 map("n", "<C-c>", "<cmd> %y+ <cr>", { desc = "Copy all", remap = true })
 
 -- Find [ ]
-map("n", "]T", "<cmd> /\\[ \\] <cr>", { desc = "Find [ ]", remap = true })
+map("n", "]T", "<cmd> /\\[ \\]<cr>", { desc = "Find [ ]", remap = true })
 
 -- Motions
 
