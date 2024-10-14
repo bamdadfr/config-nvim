@@ -15,3 +15,6 @@ vim.cmd([[let g:python3_host_prog = "/usr/bin/python3.10"]])
 -- set text wrapping
 vim.cmd([[set wrap]])
 vim.cmd([[set linebreak]])
+
+-- Set markdown formatting
+vim.cmd([[set formatexpr=markdownfmt#Format]])
