@@ -44,8 +44,10 @@ return {
     "nvimtools/none-ls.nvim",
     opts = function(_, opts)
       local nls = require("null-ls")
-      table.insert(opts.sources, nls.builtins.formatting.stylelint)
-      table.insert(opts.sources, nls.builtins.diagnostics.stylelint)
+      local filetypes = { "scss", "less", "css", "sass", "vue" }
+
+      table.insert(opts.sources, nls.builtins.formatting.stylelint.with({ filetypes = filetypes }))
+      table.insert(opts.sources, nls.builtins.diagnostics.stylelint.with({ filetypes = filetypes }))
     end,
   },
 }
