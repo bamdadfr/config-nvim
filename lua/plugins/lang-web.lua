@@ -21,6 +21,7 @@ return {
         "prettier",
         "typescript-language-server",
         "vue-language-server",
+        "stylelint",
       })
     end,
   },
@@ -38,5 +39,13 @@ return {
         vue = { "prettier" },
       },
     },
+  },
+  {
+    "nvimtools/none-ls.nvim",
+    opts = function(_, opts)
+      local nls = require("null-ls")
+      table.insert(opts.sources, nls.builtins.formatting.stylelint)
+      table.insert(opts.sources, nls.builtins.diagnostics.stylelint)
+    end,
   },
 }
