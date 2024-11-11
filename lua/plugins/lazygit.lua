@@ -4,7 +4,7 @@ return {
     {
       "<leader>ç",
       function()
-        LazyVim.lazygit()
+        Snacks.lazygit()
       end,
       desc = "Open LazyGit",
     },
