@@ -7,8 +7,6 @@ return {
       require("poimandres").setup({
         disable_background = true,
       })
-
-      vim.cmd.colorscheme("catppuccin-mocha")
     end,
   },
   {
@@ -31,6 +29,8 @@ return {
           },
         },
       })
+
+      vim.cmd.colorscheme("catppuccin-mocha")
     end,
   },
 }
