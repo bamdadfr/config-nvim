@@ -2,13 +2,7 @@ return {
   "nvim-telescope/telescope.nvim",
   keys = {
     -- Grep
-    { "<leader>:", false },
     { "<leader>fw", LazyVim.pick("live_grep"), desc = "Find grep", remap = true },
-
-    -- Files
-    -- TODO: Remove?
-    -- { "<leader>ff", LazyVim.pick("files"), desc = "Find files (all)", remap = true },
-    -- { "<leader>fF", LazyVim.pick("files", { cwd = LazyVim.root.git() }), desc = "Find files (cwd)", remap = true },
 
     -- Recent files
     {
