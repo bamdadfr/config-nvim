@@ -8,14 +8,14 @@ return {
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "hrsh7th/nvim-cmp",
+    -- "hrsh7th/nvim-cmp",
     "nvim-telescope/telescope.nvim",
   },
   opts = {
     dir = "~/Nextcloud/obsidian/",
     new_notes_location = "current_dir",
     completion = {
-      nvim_cmp = true,
+      nvim_cmp = false,
       min_chars = 2,
     },
     daily_notes = {
