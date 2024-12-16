@@ -18,3 +18,6 @@ vim.cmd([[set linebreak]])
 
 -- Set markdown formatting
 vim.cmd([[set formatexpr=markdownfmt#Format]])
+
+-- Disable animations
+vim.g.snacks_animate = false
