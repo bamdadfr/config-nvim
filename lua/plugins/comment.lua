@@ -8,7 +8,7 @@ return {
         vim.cmd("normal! j")
       end,
       mode = "n",
-      remap = true,
+      remap = false,
     },
     {
       "<leader>:",
