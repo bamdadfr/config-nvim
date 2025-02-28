@@ -175,7 +175,7 @@ local gitsigns = {
   next = {
     command = function()
       vim.schedule(function()
-        require("gitsigns").next_hunk()
+        require("gitsigns").nav_hunk("next")
       end)
     end,
     description = "Go to next hunk",
@@ -183,7 +183,7 @@ local gitsigns = {
   previous = {
     command = function()
       vim.schedule(function()
-        require("gitsigns").prev_hunk()
+        require("gitsigns").nav_hunk("prev")
       end)
     end,
     description = "Go to previous hunk",
