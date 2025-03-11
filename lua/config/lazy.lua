@@ -22,7 +22,7 @@ require("lazy").setup({
     -- editor
     { import = "lazyvim.plugins.extras.editor.aerial" },
     -- coding
-    -- { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
+    { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
     -- dap
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.dap.nlua" },
