@@ -214,9 +214,3 @@ map("n", "[c", gitsigns.previous.command, { desc = gitsigns.previous.description
 map("n", "<leader>rh", gitsigns.reset.command, { desc = gitsigns.reset.description, remap = true })
 map("n", "<leader>ph", gitsigns.preview.command, { desc = gitsigns.preview.description, remap = true })
 map("n", "<leader>gb", gitsigns.blame.command, { desc = gitsigns.blame.description, remap = true })
-
---- toggle comments
-map("n", "<leader>:", function()
-  require("Comment.api").toggle.linewise.current()
-  vim.cmd("normal! j")
-end, { desc = "Toggle comment", remap = false })
