@@ -1,5 +1,6 @@
 local map = require("utils.map")
 local Util = require("lazyvim.util")
+local close_buffer = require("utils.close_buffer")
 
 -- Documentation
 -- https://www.lazyvim.org/keymaps
@@ -16,9 +17,8 @@ local Util = require("lazyvim.util")
 -----------------
 
 -- Buffers
-local close_buffer = { command = "<cmd><leader>bd<cr>", description = "Close buffer" }
-map("n", "<A-x>", close_buffer.command, { desc = close_buffer.description, remap = true })
-map("n", "<leader>x", close_buffer.command, { desc = "Close buffer", remap = true })
+map("n", "<A-x>", close_buffer, { desc = "Close buffer", remap = true })
+map("n", "<leader>x", close_buffer, { desc = "Close buffer", remap = true })
 
 local write_buffer = { command = "<cmd>w<cr>", description = "Write buffer" }
 map("n", "<A-s>", write_buffer.command, { desc = write_buffer.description, remap = true })
