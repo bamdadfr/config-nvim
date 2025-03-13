@@ -29,9 +29,12 @@ map("n", "<A-S-x>", "<cmd>BufferLineCloseOthers<cr>", { desc = "Close all buffer
 
 -- Windows management
 map("n", "<leader>$", "<C-w>v", { desc = "Split window vertically", remap = true })
-map("n", "<leader>*", "<C-w>s", { desc = "Split window horizontally", remap = true })
+map("n", "<leader>£", "<C-w>s", { desc = "Split window horizontally", remap = true })
 map("n", "<A-w>", "<C-w>c", { desc = "Close split window", remap = true })
 map("n", "<leader>w", "<C-w>c", { desc = "Close split window", remap = true })
+
+-- Move current buffer to opposite group
+map("n", "<A-$>", "<C-w>x", { desc = "Move current buffer to opposite group", remap = true })
 
 -- Windows navigation
 map("n", "<A-l>", "<C-w>l", { desc = "Go to right window", remap = true })
