@@ -1,8 +1,14 @@
 return {
   {
+    "nvim-telescope/telescope.nvim",
+    keys = {
+      { "<leader>:", false },
+    },
+  },
+  {
     "folke/snacks.nvim",
     keys = {
-      { "<leader>:", mode = { "n" }, false },
+      { "<leader>:", false },
     },
   },
   {
