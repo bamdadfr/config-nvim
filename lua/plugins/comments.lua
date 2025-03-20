@@ -1,18 +1,28 @@
 return {
   {
-    "nvim-telescope/telescope.nvim",
+    "ibhagwan/fzf-lua",
+    lazy = false,
     keys = {
-      { "<leader>:", false },
+      { "<leader>:", mode = { "n", "x", "o" }, false },
+    },
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    lazy = false,
+    keys = {
+      { "<leader>:", mode = { "n", "x", "o" }, false },
     },
   },
   {
     "folke/snacks.nvim",
+    lazy = false,
     keys = {
-      { "<leader>:", false },
+      { "<leader>:", mode = { "n", "x", "o" }, false },
     },
   },
   {
     "numToStr/Comment.nvim",
+    lazy = false,
     keys = {
       {
         "<leader>:",
