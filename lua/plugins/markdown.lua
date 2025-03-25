@@ -10,10 +10,13 @@ return {
       sign = false,
       icons = {},
     },
+    latex = {
+      enabled = false,
+    },
     checkbox = {
       enabled = true,
       render_modes = false,
-      right_pad = 2,
+      right_pad = 1,
       custom = {
         todo = { raw = "[-]", rendered = "󰥔 ", highlight = "RenderMarkdownTodo", scope_highlight = nil },
       },
