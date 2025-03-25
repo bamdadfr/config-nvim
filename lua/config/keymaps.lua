@@ -15,7 +15,21 @@ local map = require("utils.map")
 -----------------
 
 -- Buffers
-local close_buffer = "<cmd><leader>bd<cr>"
+local close_buffer_old = "<cmd><leader>bd<cr>"
+local close_buffer = function()
+  -- Get the current buffer number
+  local current_buf = vim.api.nvim_get_current_buf()
+
+  -- Check if we're in the main editor area (not a sidebar)
+  local win_id = vim.api.nvim_get_current_win()
+  local win_config = vim.api.nvim_win_get_config(win_id)
+
+  -- Only close the buffer in the main editor area
+  if win_config.relative == "" then -- This is a normal window, not a floating one
+    vim.cmd("bd " .. current_buf)
+  end
+end
+
 map("n", "<A-x>", close_buffer, { desc = "Close buffer", remap = true })
 map("n", "<leader>x", close_buffer, { desc = "Close buffer", remap = true })
 
