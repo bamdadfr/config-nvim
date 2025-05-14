@@ -5,13 +5,15 @@ return {
     { "<leader>fw", LazyVim.pick("live_grep"), desc = "Find grep", remap = true },
 
     -- Recent files
+    { "<leader>fo", "<cmd> Telescope oldfiles <cr>", desc = "Find recent files (all)", remap = true },
     {
-      "<leader>fo",
+      "<leader>fO",
       LazyVim.pick("oldfiles", { cwd = LazyVim.root.git() }),
       desc = "Find recent files (cwd)",
       remap = true,
     },
-    { "<leader>fO", "<cmd> Telescope oldfiles <cr>", desc = "Find recent files (all)", remap = true },
+
+    -- notifications
     {
       "<leader>fN",
       "<cmd>Telescope notify<cr>",
