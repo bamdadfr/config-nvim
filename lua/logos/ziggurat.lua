@@ -17,6 +17,11 @@ l42         || || || |:--:| || || ||
                      ':==:'
    ]]
 
+-- indent
+local a = 8
+logo = logo:gsub("([^\n]+)", string.rep(" ", a) .. "%1")
+
+-- bottom padding
 local r = 1
 logo = string.rep("\n", r) .. logo .. string.rep("\n", r)
 
