@@ -5,8 +5,14 @@ local logo = [[
            ██║     ██╔══██║ ███╔╝    ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║ z         
            ███████╗██║  ██║███████╗   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║           
            ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝           
-      ]]
+]]
 
-logo = string.rep("\n", 8) .. logo .. "\n\n"
+-- indent
+local a = 0
+logo = logo:gsub("([^\n]+)", string.rep(" ", a) .. "%1")
+
+-- bottom padding
+local r = 4
+logo = string.rep("\n", r) .. logo .. string.rep("\n", r)
 
 return logo
