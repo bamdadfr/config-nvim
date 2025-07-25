@@ -61,4 +61,6 @@ local logos = {
 math.randomseed(os.time())
 local random_logo = logos[math.random(#logos)]
 local logo = require("logos." .. random_logo)
+local normalize_logo = require("utils.normalize_logo")
+logo = normalize_logo(logo)
 return logo
