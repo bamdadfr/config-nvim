@@ -6,6 +6,7 @@ return {
   ---@module 'obsidian'
   ---@type obsidian.config
   opts = {
+    legacy_commands = false,
     workspaces = {
       {
         name = "vault",
@@ -27,11 +28,11 @@ return {
     },
   },
   keys = {
-    { "<leader>od", "<cmd> ObsidianFollowLink <cr>", { desc = "Go to Obsidian definition", remap = true } },
-    { "<leader>or", "<cmd> ObsidianBacklinks <cr>", { desc = "Show Obsidian references", remap = true } },
-    { "<leader>of", "<cmd> ObsidianQuickSwitch <cr>", { desc = "Find Obsidian notes", remap = true } },
-    { "<leader>oo", "<cmd> ObsidianToday <cr>", { desc = "Create Obsidian note", remap = true } },
-    { "<leader>ow", "<cmd> ObsidianSearch <cr>", { desc = "Search Obsidian (grep)", remap = true } },
-    { "<leader>ot", "<cmd> ObsidianTemplate <cr>", { desc = "Use Obsidian template", remap = true } },
+    { "<leader>od", "<cmd>Obsidian follow_link<cr>", { desc = "Go to Obsidian definition", remap = true } },
+    { "<leader>or", "<cmd>Obsidian backlinks<cr>", { desc = "Show Obsidian references", remap = true } },
+    { "<leader>of", "<cmd>Obsidian quick_switch<cr>", { desc = "Find Obsidian notes", remap = true } },
+    { "<leader>oo", "<cmd>Obsidian today<cr>", { desc = "Create Obsidian note", remap = true } },
+    { "<leader>ow", "<cmd>Obsidian search<cr>", { desc = "Search Obsidian (grep)", remap = true } },
+    { "<leader>ot", "<cmd>Obsidian template<cr>", { desc = "Use Obsidian template", remap = true } },
   },
 }
