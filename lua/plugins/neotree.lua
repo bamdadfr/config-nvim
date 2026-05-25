@@ -2,6 +2,7 @@ local toggle = {
   command = function()
     require("neo-tree.command").execute({
       toggle = true,
+      reveal = true,
     })
   end,
   description = "Toggle Neotree",
